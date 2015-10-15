@@ -1,0 +1,63 @@
+<!-- Footer -->
+<footer id="footer">
+    <div class="container">
+		<div class="shareto-shadow">
+		</div>
+        <div class="copyright">
+            <span>{{site_copyright}}</span>
+			{% if site_license %}
+			<small>{{site_license}}</small>
+			{% endif %}
+        </div>
+    </div>
+</footer>
+<!-- #Footer -->
+<!--
+====== JavaScript ======
+-->
+<script src="{{theme_url}}/lib/jquery/jquery-2.1.1.min.js"></script>
+<script src="{{theme_url}}/lib/bootstrap/bootstrap.min.js"></script>
+<script src="{{theme_url}}/js/libphonenumber-compiled.js"></script>
+<script src="{{theme_url}}/js/phone.js"></script>
+<script src="{{theme_url}}/js/functions.js"></script>
+{% if config.ga %}
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', '{{config.ga}}', 'auto');
+	ga('send', 'pageview');
+</script>
+{% endif %}
+{% if config.fb %}
+<div id="fb-root"></div>
+<script>
+	(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId={{config.fb}}&version=v2.0";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+</script>
+{% endif %}
+<script>
+var iOS = /(iPad|iPhone|iPod)/g.test( navigator.userAgent );
+var FBIOS = /FBIOS/g.test( navigator.userAgent);
+var WX = /MicroMessenger/g.test( navigator.userAgent);
+
+if(iOS && !FBIOS && !WX){
+	if(typeof(ga)!='undefined'){
+		ga('send', 'event', '{{config.ga_action}}', '{{config.ga_label}}');
+	}
+	window.location.href='{{config.applestore}}';
+}
+</script>
+<script>
+	(function(w,d,u,o,r,s,m){
+		s=d.createElement(o),m=d.getElementsByTagName(o)[0], s.async=1,s.src=u;
+		m.parentNode.insertBefore(s,m);
+		w[r]='{{app_id}}';
+	})(window,document,'//libs.supmice.com/sup/sup-analytics.js','script','sa');
+</script>

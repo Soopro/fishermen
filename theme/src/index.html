@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="{{ locale }}">
+{% include "_head.html" %}
+{% if meta.background %} 
+<body style="background-image:url('{{meta.background}}');">
+{% else %}
+<body>
+{% endif %} 
+	<!-- Header -->
+	{% include "_header.html" %}
+	<!-- #Header -->
+	<!-- Main -->
+	<section id="main" data-offset="100">
+        <div class="container">
+            <div id="brand">
+                <span class="logo"></span>
+                <h1>{{meta.title}}</h1>
+				<span class="des">{{meta.description}}</span>
+            </div>
+            {{content}}
+        </div>
+	</section>
+	<!-- #Main -->
+	{% for section in posts %}
+	{% if section.template == 'section' %}
+	<!-- Section -->
+	<article id="{{section.alias}}">
+		{% for subpage in posts %}
+	    
+	    {% if subpage.alias != index and subpage.template != 'section' %}
+			{% if subpage.template == 'feature_left' %}
+				<!-- Section Block -->
+				{% include "feature_left.html" %}
+				<!-- #Section Block -->
+			{% endif %}
+			{% if subpage.template == 'feature_right' %}
+				<!-- Section Block -->
+				{% include "feature_right.html" %}
+				<!-- #Section Block -->
+			{% endif %}
+			{% if subpage.template == 'feature_center' %}
+				<!-- Section Block -->
+				{% include "feature_center.html" %}
+				<!-- #Section Block -->
+			{% endif %}
+			{% if subpage.template == 'feature_free' %}
+				<!-- Section Block -->
+				{% include "feature_free.html" %}
+				<!-- #Section Block -->
+			{% endif %}
+		{% endif %}
+		{% endfor %}
+	</article>
+	<!-- #Section -->
+	{% endif %}
+	{% endfor %}
+	<!-- Footer -->
+	{% include "_footer.html" %}
+	<!-- #Footer -->
+</body>
+</html>

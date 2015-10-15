@@ -1,0 +1,43 @@
+<!-- Header -->
+<header id="masthead">
+	 <nav class="container nav-primary">
+	     <div class="navbar">
+		     <div class="navbar-header">
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+               </button>
+			   <div class="navbar-brand">
+				   	{{site_title}}
+			   </div>
+             </div>
+             <div class="navbar-collapse collapse">
+                 <ul class="nav navbar-nav">
+					 {% for page in pages %}
+					 	{% if page.nav %}
+                     	<li>
+							{% if page.link == false %}
+							<a href="#{{page.alias}}" class="parallaxlink">{{page.nav}}</a>
+							{% else %}
+							<a href="{{page.link}}" target="{{page.target}}">{{page.nav}}</a>
+							{% endif %}
+						</li>
+					 	{% endif %}
+					 {% endfor %}
+					 {% if translates %}
+                     <li class="dropdown">
+                         <a href="#" data-toggle="dropdown" class="language dropdown-toggle">{{language_text}}<span class="caret"></span></a>
+                         <ul class="dropdown-menu language-menu" role="menu">
+							 {% for trans in translates %}
+                             <li><a href="{{trans.url}}">{{trans.name}}</a></li>
+							 {% endfor %}
+                         </ul>
+                     </li>
+					 {% endif %}
+                 </ul>
+             </div>
+         </div>
+     </nav>
+</header>
+<!-- #Header -->
