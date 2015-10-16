@@ -512,3 +512,32 @@ Lastly, apply responsive CSS fixes as necessary
 		display:none;
 	}
 }
+
+/* Languages
+/* ----------------------------------------------- */
+
+html[lang^="zh"] body,
+html[lang^="zh"] div,
+html[lang^="zh"] a,
+html[lang^="zh"] ul li,
+html[lang^="zh"] button,
+html[lang^="zh"] h1,
+html[lang^="zh"] h2,
+html[lang^="zh"] h3,
+html[lang^="zh"] h4,
+html[lang^="zh"] h5,
+html[lang^="zh"] h6,
+html[lang^="zh"] p,
+html[lang^="zh"] label {
+  font-family: 'Open Sans',
+               'Hiragino Sans GB', 'Microsoft YaHei', 'STHeiti',
+               'Helvetica Neue', Helvetica,
+               Arial, 'Lucida Grande', sans-serif;
+}
+
+
+@media screen and (max-width: 767px) {
+  html[lang^="zh"] #features h2 {
+      font-size: 30pt
+  }
+}
