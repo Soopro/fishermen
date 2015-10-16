@@ -1,28 +1,41 @@
 <head>
-<meta http-equiv=Content-Type content="text/html;charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>{{site_title}} | {{meta.description}}</title>
+
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="description" content="{{ meta.description | striptags }}">
+<meta name="robots" content="{{ g.robots }}">
+<meta name="author" content="{{ meta.author | striptags }}">
+
+<!-- Browser support -->
+<meta name="viewport" 
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="format-detection" content="telephone=yes">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="{{site_description}}">
-<meta name="keywords" content="{{site_keywords}}">
-<meta name="author" content="{{meta.author}}">
-<!-- SEO -->
-{{config.seo}}
-<!-- SEO -->
-<!-- Favicons -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{theme_url}}/ico/apple-touch-icon-144-precomposed.png">
-<link rel="shortcut icon" href="{{theme_url}}/ico/favicon.png">
+<meta name="renderer" content="webkit">
 
-<title>{{site_title}} | {{meta.description}}</title>
+<!-- Favicons -->
+<link href="{{site_meta.touicon or g.default_touch_icon}}"
+      rel="apple-touch-icon-precomposed" sizes="144x144">
+<link href="{{site_meta.favicon or g.default_touch_icon}}"
+      rel="shortcut icon">
+
 <!-- Webfonts -->
-<link href='{{theme_url}}/font/webfonts.css' rel='stylesheet' type='text/css'>
+<link href='{{theme_url}}/styles/fonts/lato.css'
+ rel='stylesheet' type='text/css'>
 
 <!-- Bootstrap core CSS -->
 <link href="{{theme_url}}/lib/bootstrap/bootstrap.min.css" rel="stylesheet">
 
 <!-- Styles-->
-<link href="{{theme_url}}/css/style.css" rel="stylesheet">
-<link href="{{theme_url}}/css/{{locale}}.css" rel="stylesheet">
+<link href="{{theme_url}}/styles/style.css" rel="stylesheet">
+
+
+{{site_meta.analytics}}
+{{site_meta.seo}}
+{{sa.code}}
+{{g.custom_styles}}
 </head>

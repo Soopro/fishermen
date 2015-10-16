@@ -1,58 +1,57 @@
+{% import "g" as g with context %}
+
 <!DOCTYPE html>
-<html lang="{{ locale }}">
+<html lang="{{lang}}">
 {% include "_head.html" %}
-{% if meta.background %} 
-<body style="background-image:url('{{meta.background}}');">
-{% else %}
-<body>
-{% endif %} 
+{% set bgstyle= 'url('+meta.background+')' if meta.background else '' %}
+<body style="background-image:{{bgstyle}};">
 	<!-- Header -->
 	{% include "_header.html" %}
 	<!-- #Header -->
 	<!-- Main -->
 	<section id="main" data-offset="100">
-        <div class="container">
-            <div id="brand">
-                <span class="logo"></span>
-                <h1>{{meta.title}}</h1>
-				<span class="des">{{meta.description}}</span>
-            </div>
-            {{content}}
+    <div class="container">
+      <div id="brand">
+        <div class="logo">
+          <img src="{{site_meta.logo or g.default_logo}}"
+           alt="{{site_meta.title}}" />
         </div>
-	</section>
+        <h1>{{meta.title}}</h1>
+  	    <h2>{{meta.subtitle}}</h2>
+      </div>
+      <form id="get-link" action="mailto:mail@youremail.com" sup-mailform>
+        <input type="hidden" name="subject" value="Get&nbsp;Fisherman">
+        <div class="form-group row">
+          <div class="col-sm-8 col-numbers">
+            <!-- Phone Number -->
+            <input id="phone" type="text" name="phone" title="Phone"
+             placeholder="Phone number"
+             class="form-control phone-number">
+            <!-- #Phone Number -->
+          </div>
+          <div class="col-sm-4 col-get-link">
+            <button id="send-btn" class="btn btn-primary btn-get-link">
+              {{_("Get Link")}}
+            </button>
+          </div>
+        </div>
+      </form>
+      <div id="excerpt">
+        <p>{{meta.description}}</p>
+      </div>
+    </div>
+  </section>
 	<!-- #Main -->
-	{% for section in posts %}
-	{% if section.template == 'section' %}
+	{% for page in pages if not page.is_front %}
 	<!-- Section -->
-	<article id="{{section.alias}}">
-		{% for subpage in posts %}
-	    
-	    {% if subpage.alias != index and subpage.template != 'section' %}
-			{% if subpage.template == 'feature_left' %}
+	<article id="{{page.alias}}">
+			{% if page.template != 'index' and page.template %}
 				<!-- Section Block -->
-				{% include "feature_left.html" %}
+				{% include page.template+".html" %}
 				<!-- #Section Block -->
 			{% endif %}
-			{% if subpage.template == 'feature_right' %}
-				<!-- Section Block -->
-				{% include "feature_right.html" %}
-				<!-- #Section Block -->
-			{% endif %}
-			{% if subpage.template == 'feature_center' %}
-				<!-- Section Block -->
-				{% include "feature_center.html" %}
-				<!-- #Section Block -->
-			{% endif %}
-			{% if subpage.template == 'feature_free' %}
-				<!-- Section Block -->
-				{% include "feature_free.html" %}
-				<!-- #Section Block -->
-			{% endif %}
-		{% endif %}
-		{% endfor %}
 	</article>
 	<!-- #Section -->
-	{% endif %}
 	{% endfor %}
 	<!-- Footer -->
 	{% include "_footer.html" %}
