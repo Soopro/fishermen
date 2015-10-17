@@ -34,7 +34,7 @@ $(document).ready(function () {
       window.location.hash = '/'+hash_path;
       // for stupid IE, if no slash the window might brink some how.
     });
-    $('.navbar-toggle').click()
+    $('.navbar-collapse').collapse('hide');
     e.preventDefault();
     return false;
   });
