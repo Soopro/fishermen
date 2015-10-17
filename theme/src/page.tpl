@@ -1,34 +1,38 @@
+<sup-set ng-model="g.default_featured_img"
+         value="{{theme_url+'/styles/default_featured_img.png'}}"></sup-set>
+
 <!-- Webfonts -->
-<link href='{{theme_url}}/font/webfonts.css?now={{ now }}' rel='stylesheet' type='text/css'>
+<link ng-href='{{theme_url}}/styles/fonts/lato.css'
+ rel='stylesheet' type='text/css'>
 <!-- Bootstrap core CSS -->
-<link href="{{theme_url}}/lib/bootstrap/bootstrap.min.css?now={{ now }}" rel="stylesheet">
+<link ng-href="{{theme_url}}/libs/bootstrap/bootstrap.min.css"
+ rel='stylesheet' type='text/css'>
 <!-- Styles-->
-<link href="{{theme_url}}/css/style.css?now={{ now }}" rel="stylesheet">
-<link ng-if="locale" ng-href="{{ theme_url }}/css/{{locale}}.css?now={{ now }}" rel="stylesheet" type='text/css'>
-<link href="{{theme_url}}/css/editor.css?now={{ now }}" rel="stylesheet">
-	<!-- Features -->
-	<article id="features">
-	    <!-- Feature Block -->
-	    <div class="feature-block">
-    	    <section class="container">
-				<div sup-angular-wysiwyg="sup-editor" ng-model="content">
-		            <div class="row">
-		                <div class="col-sm-4 pointbox">
-	                        <h3>Security and Privacy</h3>
-	                        <img src="{{theme_url}}/store/ico_privacy.png" alt="Security and Privacy" />
-		                </div>
-		                <div class="col-sm-4 pointbox">
-		                    <h3>Cross-platform</h3>
-		                    <img src="{{theme_url}}/store/ico_platform.png" alt="Cross-platform" />
-		                </div>
-		                <div class="col-sm-4 pointbox">
-		                    <h3>Simple, Fast, Reliable</h3>
-		                    <img src="{{theme_url}}/store/ico_lighting.png" alt="Simple, Fast, Reliable" />
-		                </div>
-		            </div>
-				</div>
-    	    </section>
-	    </div>
-	    <!-- #Feature Block -->
-	</article>
-	<!-- #Features -->
+<link ng-href="{{theme_url}}/styles/style.css" 
+ rel='stylesheet' type='text/css'>
+<link ng-href="{{theme_url}}/styles/editor.css"
+ rel="stylesheet" type='text/css'>
+
+<!-- Content Block -->
+<article id="meta.alias" class="content-block">
+  <div class="feature">
+	  <section class="container">
+      <div class="row">
+        <div class="col-md-12 imgbox">
+          <img src="{{meta.featured_img.src || g.default_featured_img}}" />
+        </div>
+        <div class="col-md-12 textbox">
+          <header>
+            <h2 sup-editor-meta ng-model="meta.title"
+             default="{{_('Title')}}"></h2>
+          </header>
+          <div class="content" sup-angular-wysiwyg ng-model="content"
+           default="{{_('$_CONTENT')}}">
+            {{page.content}}
+          </div>
+        </div>
+      </div>
+	  </section>
+  </div>
+</article>
+<!-- #Content Block -->

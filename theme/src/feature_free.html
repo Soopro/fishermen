@@ -1,5 +1,9 @@
-<div class="feature-block">
+{% if g and page %}
+<div class="feature">
     <div class="container">
-        {{subpage.content}}
+        {{page.content}}
     </div>
 </div>
+{% else %}
+<script>window.location.replace('{{base_url}}/#/{{meta.alias}}');</script>
+{% endif %}

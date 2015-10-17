@@ -1,20 +1,21 @@
 {% if g and page %}
 <div class="feature">
-    <section class="container">
-      <div class="row">
-        <div class="col-md-12 imgbox">
-          <img src="{{page.featured_img.src}}" alt="{{page.title}}" />
-        </div>
-        <div class="col-md-12 textbox">
-          <header>
-            <h2>{{page.title}}</h2>
-          </header>
-          <div class="content">
-            {{page.content}}
-          </div>
+  <section class="container">
+    <div class="row">
+      <div class="col-md-12 imgbox">
+        <img src="{{page.featured_img.src or g.default_featured_img}}"
+         alt="{{page.title}}" />
+      </div>
+      <div class="col-md-12 textbox">
+        <header>
+          <h2>{{page.title}}</h2>
+        </header>
+        <div class="content">
+          {{page.content}}
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 </div>
 {% else %}
 <script>window.location.replace('{{base_url}}/#/{{meta.alias}}');</script>

@@ -11,7 +11,8 @@
         </div>
       </div>
       <div class="col-md-6 pull-left imgbox">
-        <img src="{{page.featured_img}}" alt="{{page.title}}" />
+        <img src="{{page.featured_img.src or g.default_featured_img}}" 
+         alt="{{page.title}}" />
       </div>
     </div>
   </section>
