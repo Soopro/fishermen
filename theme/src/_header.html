@@ -4,7 +4,7 @@
      <div class="navbar">
 	     <div class="navbar-header">
          <button type="button" class="navbar-toggle" data-toggle="collapse"
-          data-target="navbar-collapse">
+          data-target=".navbar-collapse">
            <span class="icon-bar"></span>
            <span class="icon-bar"></span>
            <span class="icon-bar"></span>
@@ -18,7 +18,7 @@
 				 {% for nav in menu.primary %}
           <li>
 						<a href="{{nav.link}}" target="{{nav.target}}"
-             class="parallaxlink">{{nav.title}}</a>
+             class="parallax-link">{{nav.title}}</a>
 					</li>
 				 {% endfor %}
 				 {% if translates %}

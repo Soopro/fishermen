@@ -77,7 +77,6 @@ Version: 1.0
 ----------------------------------------------- */
 html, body{
 	box-sizing: border-box;
-	
 }
 body{
 	background: #f5f5f5 url('bg.jpg') no-repeat fixed center center;
@@ -128,11 +127,17 @@ mark {
 	background:none;
 }
 
-.shareto{
+.shareto {
   margin: 0 auto;
   max-width: 400px;
   text-align: center;
   padding: 10px;
+}
+.shareto > * {
+  margin: 0 5px;
+}
+.shareto > a {
+  display: block;
 }
 
 /* GRID: =Masthead
@@ -216,17 +221,18 @@ mark {
 /* The actual visual size of the page */
 #main{
 	position: relative;
-	max-width:940px;
-	margin: 90px auto 0 auto;
+	max-width: 940px;
+	margin: 0 auto 0 auto;
 	/*min-height: 860px;
 	transition: height 1s;*/
 }
-#main .container{
-  max-width:600px;
+#main > .container {
+  max-width: 600px;
   text-align: center;
+  padding-top: 90px;
 }
 #main a, #main a:link, #main a:visited{
-	color:#fff;
+	color: #fff;
 }
 
 #main a:hover{
@@ -243,7 +249,7 @@ mark {
 #main h4,
 #main h5,
 #main p{
-	color:#f1f1f1;
+	color: #f1f1f1;
 }
 
 
@@ -254,8 +260,8 @@ mark {
 }
 #brand .logo {
   display: block;
-  width: 160px;
-  height: 160px;
+  width: 128px;
+  height: 128px;
   margin: 0 auto;
   text-align: center;
 }
@@ -266,13 +272,14 @@ mark {
 /* typography */
 #brand h1 {
   color:#f1f1f1;
+  margin-top: 6px;
   margin-bottom: 12px;
   line-height: 1em;
   padding: 0;
 }
 #brand h2 {
   display: block;
-  font-size: 18pt;
+  font-size: 16pt;
   margin-top: 0;
   text-transform: uppercase;
   color: #cf6;
@@ -282,68 +289,46 @@ mark {
 
 /* MODULE: =GetLink
 ----------------------------------------------- */
-#get-link{
+#get-link {
   margin: 0 auto;
   max-width: 500px;
 }
-#get-link .country-code-list a, 
-#get-link .country-code-list a:link, 
-#get-link .country-code-list a:visited {
-  color: #f1f1f1;
-  text-decoration: none;
-}
-#get-link .btn-get-link, 
-#get-link .btn-get-link:link, 
-#get-link .btn-get-link:visited {
-  color: #f1f1f1;
-  display: block;
-  width: 100%;
-}
-#get-link .btn-get-link.disabled:hover,
-#get-link .btn-get-link.disabled:active,
-#get-link .btn-get-link.disabled:focus {
-  color: #f1f1f1;
-  display: block;
-  width: 100%;
-}
 
-#get-link .col-numbers, #get-link .col-get-links{
-  margin-bottom: 10px;
-}
-#status{
-	display:none;
-}
+
 
 /* MODULE: =Excerpt
 ----------------------------------------------- */
-#excerpt{
+#excerpt {
   max-width: 400px;
   margin: 25px auto;
   text-align: center;
 }
+#excerpt p{
+  padding: 0;
+  margin: 0;
+}
 
 /* MODULE: =Badge
 ----------------------------------------------- */
-#store{
+#store {
   max-width: 500px;
   margin: 20px auto;
 }
 
-#store .flag{
+#store .flag {
   display: block;
   margin-bottom:10px;
   width: 100%;
   height: 58px;
   border-radius: 10px;
   border: 0;
-  /*text-indent: -9000em;*/
-  background: rgba(50,50,50,0.5);
+  background: #555;
 }
-
-#store .flag-online, #store .flag-online:link, #store .flag-online:visited{
-  background: #666;
+#store .flag:not(a) {
+  opacity: 0.2;
+  background: rgba(50,50,50,0.9);
 }
-#store .flag-online:hover{
+#store a:hover{
   background: #690;
 }
 
@@ -369,11 +354,13 @@ mark {
 /* MODULE: =GoFeatures
 ----------------------------------------------- */
 #gofeatures{
-  max-width: 500px;
-  margin: 100px auto 20px auto;
+  margin: 0 auto;
+  padding: 60px 0 10px 0;
 }
 
-#gofeatures .btn-gofeatures, #gofeatures .btn-gofeatures:link, #gofeatures .btn-gofeatures:visited{
+#gofeatures .btn-gofeatures,
+#gofeatures .btn-gofeatures:link, 
+#gofeatures .btn-gofeatures:visited{
   margin: 0 auto;
   display: block;
   width: 220px;
@@ -389,54 +376,51 @@ mark {
   background-position: center -200px;
 }
 
-/* GRID: =Features
+/* GRID: =Block
 ----------------------------------------------- */
-#features{
+.content-block{
   position: relative;
   margin: 20px auto 0 auto;
   background: #fff;
 }
-#features .feature-block{
+.content-block .feature{
   min-height: 300px;
   padding-top: 40px;
   border-bottom: 1px solid #ccc;
 }
-#features .container{
-  max-width:960px;
-}
 
-#features .feature-block article header{
+.content-block .feature article header{
   margin-top: 60px;
 }
-#features header.center{
+.content-block header.center{
   text-align: center;
 }
-#features .imgbox {
+.content-block .imgbox {
   text-align: center;
 }
-#features .imgbox img{
+.content-block .imgbox img{
   max-width: 99%;
   height: auto;
   margin:0 auto;
 }
-#features .pointbox{
+.content-block .pointbox{
 	text-align: center;
 	margin-bottom:50px;
 }
 
-#features .pointbox img{
+.content-block .pointbox img{
 	max-width: 99%;
   height: auto;
   margin: 0 auto;
 }
-#features .pointbox h3{
+.content-block .pointbox h3{
 	height:65px;
 }
-#features .textbox{
+.content-block .textbox{
   padding-top: 40px;
 }
 
-#features .textbox p{
+.content-block .textbox p{
   font-size: 1.35em;
   line-height: 1.8;
 }

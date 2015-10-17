@@ -9,7 +9,7 @@
 	{% include "_header.html" %}
 	<!-- #Header -->
 	<!-- Main -->
-	<section id="main" data-offset="100">
+	<section id="main">
     <div class="container">
       <div id="brand">
         <div class="logo">
@@ -19,37 +19,60 @@
         <h1>{{meta.title}}</h1>
   	    <h2>{{meta.subtitle}}</h2>
       </div>
-      <form id="get-link" action="mailto:mail@youremail.com" sup-mailform>
-        <input type="hidden" name="subject" value="Get&nbsp;Fisherman">
-        <div class="form-group row">
-          <div class="col-sm-8 col-numbers">
-            <!-- Phone Number -->
-            <input id="phone" type="text" name="phone" title="Phone"
-             placeholder="Phone number"
-             class="form-control phone-number">
-            <!-- #Phone Number -->
+      <div id="get-link">
+        <form action="mailto:mail@youremail.com" sup-mailform>
+          <input type="hidden" name="subject" value="Get&nbsp;Fisherman">
+          <input type="hidden" name="message" value="I want get a Fisherman">
+          <div class="form-group row">
+            <div class="col-sm-8">
+              <!-- Phone Number -->
+              <input id="phone" type="text" name="phone" title="Phone:"
+               placeholder="Phone number"
+               class="form-control phone-number">
+              <!-- #Phone Number -->
+            </div>
+            <div class="col-sm-4">
+              <button class="btn btn-primary btn-block">
+                {{_("Get Link")}}
+              </button>
+            </div>
           </div>
-          <div class="col-sm-4 col-get-link">
-            <button id="send-btn" class="btn btn-primary btn-get-link">
-              {{_("Get Link")}}
-            </button>
-          </div>
-        </div>
-      </form>
+        </form>
+      </div>
       <div id="excerpt">
         <p>{{meta.description}}</p>
+      </div>
+      <div id="store">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="flag"><span class="android"></span></div>
+          </div>
+          <div class="col-sm-4">
+            <a href="#" class="flag">
+              <span class="apple"></span>
+            </a>
+          </div>
+          <div class="col-sm-4">
+            <div class="flag"><span class="wphone"></span></div>
+          </div>
+        </div>
+      </div>
+      <div id="gofeatures">
+        <a href="#" class="btn-gofeatures parallax-link parallax-go-first">
+          {{_('Features')}}
+        </a>
       </div>
     </div>
   </section>
 	<!-- #Main -->
-	{% for page in pages if not page.is_front %}
+	{% for page in pages| type('page') if not page.is_front %}
 	<!-- Section -->
-	<article id="{{page.alias}}">
-			{% if page.template != 'index' and page.template %}
-				<!-- Section Block -->
-				{% include page.template+".html" %}
-				<!-- #Section Block -->
-			{% endif %}
+	<article id="{{page.alias}}" class="content-block">
+		{% if page.template != 'index' and page.template %}
+			<!-- Section Block -->
+			{% include page.template+".html" %}
+			<!-- #Section Block -->
+		{% endif %}
 	</article>
 	<!-- #Section -->
 	{% endfor %}
