@@ -42,47 +42,70 @@
 <!-- #Header -->
 <!-- Main -->
 <section id="main" data-offset="100">
-      <div class="container">
-          <div id="brand">
-              <span class="logo"></span>
-              <div ng-init="meta.title = meta.title || 'Small Talks'; meta.description = meta.description || 'Small Talks'">
-				<h1 sup-editor-meta ng-model="meta.title">Small Talks</h1>
-				<span sup-editor-meta class="des" ng-model="meta.description">Multiuser Video Chat</span>
-			</div>
-          </div>
-		<div sup-angular-wysiwyg="sup-editor" ng-model="content">
-			
-            <div id="excerpt">
-                <p>We have recreated the experience of audio and video chatting. Now it’s much easier for you to chat with friends or family members on mobile devices.</p>
-            </div>
-            <div id="store">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="flag"><span class="android"></span></div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="flag flag-online"><span class="apple"></span></div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="flag"><span class="wphone"></span></div>
-                    </div>
-                </div>
-            </div>
-            <div id="gofeatures">
-                <a href="#features" class="btn-gofeatures parallaxlink">Features</a>
-            </div>
-			
-		</div>
+  <div class="container">
+    <div id="brand">
+      <div class="logo" sup-editor-media ng-model="meta.logo">
+        <img src="{{meta.logo || site_meta.logo || g.default_logo}}"
+         alt="{{site_meta.title}}" />
       </div>
+      <h1 sup-editor-meta ng-model="meta.title"
+       default="{{_('Fisherman')}}"></h1>
+      <h2 sup-editor-meta ng-model="meta.subtitle"
+       default="{{_('A good mobile APP')}}"></h2>
+    </div>
+    <div id="get-link" sup-editor-widget-script ng-model="meta.form">
+      <form action="mailto:mail@youremail.com" sup-mailform>
+        <input type="hidden" name="subject" value="Get&nbsp;Fisherman">
+        <input type="hidden" name="message" value="I want get a Fisherman">
+        <div class="form-group row">
+          <div class="col-sm-8">
+            <!-- Phone Number -->
+            <input id="phone" type="text" name="phone" title="Phone:"
+             placeholder="Phone number"
+             class="form-control phone-number">
+            <!-- #Phone Number -->
+          </div>
+          <div class="col-sm-4">
+            <button class="btn btn-primary btn-block">
+              {{_("Get Link")}}
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div sup-editor-meta="sup-editor" ng-model="content">	
+      <div id="excerpt">
+        <p sup-editor-meta ng-model="meta.description"
+         default="{{_('$_DESCRIPTION')}}"></p>
+      </div>
+      <div id="store">
+        <div class="row">
+          <div class="col-sm-4">
+            <a href="{{meta.app_android.link || '#'}}" class="flag"
+             sup-editor-widget-button ng-model="meta.app_android">
+              <span class="android"></span>
+            </a>
+          </div>
+          <div class="col-sm-4">
+            <a href="{{meta.app_ios.link || '#'}}" class="flag"
+             sup-editor-widget-button ng-model="meta.app_ios">
+              <span class="apple"></span>
+            </a>
+          </div>
+          <div class="col-sm-4">
+            <a href="{{meta.app_wp.link || '#'}}" class="flag"
+             sup-editor-widget-button ng-model="meta.app_wp">
+              <span class="wphone"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div id="gofeatures">
+        <a href="#" class="btn-gofeatures">
+          {{_('Features')}}
+        </a>
+      </div>
+		</div>
+  </div>
 </section>
 <!-- #Main -->
-<!-- Footer -->
-<footer id="footer">
-    <div class="container">
-        <div class="copyright">
-            <span>{{site_copyright}}</span>
-			<small>{{site_license}}</small>
-        </div>
-    </div>
-</footer>
-<!-- #Footer -->

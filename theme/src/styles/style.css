@@ -324,8 +324,9 @@ mark {
   border: 0;
   background: #555;
 }
-#store .flag:not(a) {
+#store a.flag[href="#"] {
   opacity: 0.2;
+  pointer-events: none;
   background: rgba(50,50,50,0.9);
 }
 #store a:hover{
@@ -383,13 +384,15 @@ mark {
   margin: 20px auto 0 auto;
   background: #fff;
 }
-.content-block .feature{
+.content-block .feature,
+.content-block .page{
   min-height: 300px;
   padding-top: 40px;
   border-bottom: 1px solid #ccc;
 }
 
-.content-block .feature article header{
+.content-block .feature article header,
+.content-block .page article header{
   margin-top: 60px;
 }
 .content-block header.center{

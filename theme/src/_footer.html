@@ -1,11 +1,15 @@
 <!-- Footer -->
 <footer id="footer">
     <div class="container">
+      {% if socials %}
       <div class="shareto" id="shareto">
+        {% for social in socials %}
         <img src="{{theme_url}}/styles/ico_tumblr.png" alt="tumblr" />
         <img src="{{theme_url}}/styles/ico_facebook.png" alt="facebook" />
         <img src="{{theme_url}}/styles/ico_tweet.png" alt="tweet" />
+        {% endfor %}
       </div>
+      {% endif %}
       <div class="copyright">
         <span>{{site_meta.copyright}}</span>
 			  <span>{{site_meta.license}}</span>

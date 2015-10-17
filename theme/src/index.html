@@ -20,24 +20,7 @@
   	    <h2>{{meta.subtitle}}</h2>
       </div>
       <div id="get-link">
-        <form action="mailto:mail@youremail.com" sup-mailform>
-          <input type="hidden" name="subject" value="Get&nbsp;Fisherman">
-          <input type="hidden" name="message" value="I want get a Fisherman">
-          <div class="form-group row">
-            <div class="col-sm-8">
-              <!-- Phone Number -->
-              <input id="phone" type="text" name="phone" title="Phone:"
-               placeholder="Phone number"
-               class="form-control phone-number">
-              <!-- #Phone Number -->
-            </div>
-            <div class="col-sm-4">
-              <button class="btn btn-primary btn-block">
-                {{_("Get Link")}}
-              </button>
-            </div>
-          </div>
-        </form>
+        {{meta.form.code}}
       </div>
       <div id="excerpt">
         <p>{{meta.description}}</p>
@@ -45,15 +28,19 @@
       <div id="store">
         <div class="row">
           <div class="col-sm-4">
-            <div class="flag"><span class="android"></span></div>
+            <a href="{{meta.app_android.link | url or '#'}}" class="flag">
+              <span class="android"></span>
+            </a>
           </div>
           <div class="col-sm-4">
-            <a href="#" class="flag">
+            <a href="{{meta.app_ios.link | url or '#'}}" class="flag">
               <span class="apple"></span>
             </a>
           </div>
           <div class="col-sm-4">
-            <div class="flag"><span class="wphone"></span></div>
+            <a href="{{meta.app_wp.link | url or '#'}}" class="flag">
+              <span class="wphone"></span>
+            </a>
           </div>
         </div>
       </div>

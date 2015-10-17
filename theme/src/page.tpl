@@ -15,7 +15,7 @@
 
 <!-- Content Block -->
 <article id="meta.alias" class="content-block">
-  <div class="feature">
+  <div class="page">
 	  <section class="container">
       <div class="row">
         <div class="col-md-12 imgbox">
