@@ -19,7 +19,9 @@
 	  <section class="container">
       <div class="row">
         <div class="col-md-12 imgbox">
-          <img src="{{meta.featured_img.src || g.default_featured_img}}" />
+          <div sup-editor-media ng-model="meta.featured_img">
+            <img src="meta.featured_img.src || g.default_featured_img" />
+          </div>
         </div>
         <div class="col-md-12 textbox">
           <header>
@@ -27,9 +29,7 @@
              default="{{_('Title')}}"></h2>
           </header>
           <div class="content" sup-angular-wysiwyg ng-model="content"
-           default="{{_('$_CONTENT')}}">
-            {{page.content}}
-          </div>
+           default="{{_('$_CONTENT')}}"></div>
         </div>
       </div>
 	  </section>

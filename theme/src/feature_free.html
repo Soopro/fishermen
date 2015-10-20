@@ -1,5 +1,13 @@
 {% if g and page %}
-<div class="feature">
+{% set bg_img = "background-image:url('"+page.background.src+"');" 
+   if page.background.src else '' %}
+{% set bg_color = "background-color:"+page.background.color+";" 
+   if page.background.color else '' %}
+{% set bg_repeat = "background-repeat:"+page.background.repeat+";" 
+   if page.background.repeat else '' %}
+   
+<div class="feature {{page.background.class}}"
+ style="{{bg_img}}{{bg_color}}{{bg_repeat}}">
     <div class="container">
         {{page.content}}
     </div>
