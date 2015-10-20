@@ -31,7 +31,7 @@
           </li>
           <li ng-if="translates">
             <a href="#" class="language">
-              {{_('Languages')}} <span class="caret"></span>
+              <span>{{_('Languages')}}</span> <span class="caret"></span>
             </a>
           </li>
         </ul>

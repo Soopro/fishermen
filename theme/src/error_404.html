@@ -1,0 +1,30 @@
+{% import "g" as g with context %}
+
+<!DOCTYPE html>
+<html lang="{{lang}}">
+{% include "_head.html" %}
+{% set bgstyle= 'url('+meta.background+')' if meta.background else '' %}
+<body class="cover" style="background-image:{{bgstyle}};">
+	<!-- Section -->
+	<article class="content-block error-404">
+    <div class="page">
+      <section class="container">
+        <div class="row">
+          <div class="col-md-12 textbox">
+            <header>
+              <h2>{{meta.title}}</h2>
+            </header>
+            <div class="content">
+              {{content}}
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+	</article>
+	<!-- #Section -->
+	<!-- Footer -->
+	{% include "_footer.html" %}
+	<!-- #Footer -->
+</body>
+</html>

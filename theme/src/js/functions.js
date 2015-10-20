@@ -1,4 +1,20 @@
+var language_texts = {
+  "en":"Languages",
+  "zh":"语言",
+}
+
 $(document).ready(function () {
+	//Language Switcher
+	$('#language-switcher')
+  .each(function() {
+		var lang = userLocale.split('_')[0] || 'en';
+    for(var key in language_texts){
+      if(key == lang){
+        $(this).html(language_texts[key]);
+      }
+    }
+	});
+  //Parallax
   $('.parallax-link[href*=#]').click(function(e) {
     var target_top=0;
     var current_hash='';
@@ -39,6 +55,7 @@ $(document).ready(function () {
     return false;
   });
   
+  //Resize
   resizeHandler(true);
   $(window).resize( function(){
     resizeHandler();
