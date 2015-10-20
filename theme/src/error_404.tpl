@@ -13,10 +13,8 @@
 
 
 <!-- Content Block -->
-<article id="meta.alias" class="content-block">
-  <div class="page {{meta.background.class}}"
-   sup-editor-widget-bg ng-model="meta.background"
-   style="{{meta.background.style}}">
+<article id="meta.alias" class="content-block error-404">
+  <div class="page">
 	  <section class="container">
       <div class="row">
         <div class="col-md-12 imgbox">
@@ -30,10 +28,10 @@
         <div class="col-md-12 textbox">
           <header>
             <h2 sup-editor-meta ng-model="meta.title"
-             default="{{_('Title')}}"></h2>
+             default="{{_('Error 404')}}"></h2>
           </header>
           <div class="content" sup-angular-wysiwyg ng-model="content"
-           default="{{_('$_CONTENT')}}"></div>
+           default="{{_('$_ERROR404')}}"></div>
         </div>
       </div>
 	  </section>

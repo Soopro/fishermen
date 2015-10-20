@@ -10,8 +10,7 @@
 <!-- Styles-->
 <link ng-href="{{theme_url}}/styles/style.css" 
  rel='stylesheet' type='text/css'>
-<link ng-href="{{theme_url}}/styles/editor.css"
- rel="stylesheet" type='text/css'>
+
 
 <!-- Header -->
 <header id="masthead">
@@ -49,9 +48,9 @@
          alt="{{site_meta.title}}" />
       </div>
       <h1 sup-editor-meta ng-model="meta.title"
-       default="{{_('Fisherman')}}"></h1>
+       default="{{_('Title')}}"></h1>
       <h2 sup-editor-meta ng-model="meta.subtitle"
-       default="{{_('A good mobile APP')}}"></h2>
+       default="{{_('Description text here')}}"></h2>
     </div>
     <div id="get-link" sup-editor-widget-script ng-model="meta.form">
       <form action="mailto:mail@youremail.com" sup-mailform>
@@ -76,7 +75,7 @@
     <div sup-editor-meta="sup-editor" ng-model="content">	
       <div id="excerpt">
         <p sup-editor-meta ng-model="meta.description"
-         default="{{_('$_DESCRIPTION')}}"></p>
+         default="{{_('Description text here)}}"></p>
       </div>
       <div id="store">
         <div class="row">

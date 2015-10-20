@@ -9,9 +9,30 @@
 	"description": "A simple website for your mobile app.",
 	
   "templates":{
-    "index":"Homepage",
-    "page":"Static Page",
-    "works":"Works",
+    "index":{
+      "en":"Homepage",
+      "zh":"首页"
+    },
+    "page":{
+      "en":"Static Page",
+      "zh":"静态页"
+    },
+    "feature_left":{
+      "en":"Feature(Left)",
+      "zh":"特性页面(左图)"
+    },
+    "feature_right":{
+      "en":"Feature(Right)",
+      "zh":"特性页面(右图)"
+    },
+    "feature_bottom":{
+      "en":"Feature(Bottom)",
+      "zh":"特性页面(下图)"
+    },
+    "feature_free":{
+      "en":"Feature(Free)",
+      "zh":"特性页面(任意)"
+    },
     "error_404": "404"
   },
   

@@ -10,27 +10,14 @@
 <!-- Styles-->
 <link ng-href="{{theme_url}}/styles/style.css" 
  rel='stylesheet' type='text/css'>
-<link ng-href="{{theme_url}}/styles/editor.css"
- rel="stylesheet" type='text/css'>
+
 
 <!-- Content Block -->
-<sup-set ng-model="bg_img"
-         value="{{background.src?'background-image:url('+
-         background.src+')':'';}}"></sup-set>
-         
-<sup-set ng-model="bg_color"
-         value="{{background.color?'background-color:'+
-         background.color :'';}}"></sup-set>
-
-<sup-set ng-model="bg_repeat"
-         value="{{background.repeat?'background-repeat:'+
-         background.repeat :'';}}"></sup-set>
-
 <article id="meta.alias" class="content-block">
   <div class="feature {{meta.background.class}}"
    sup-editor-widget-bg ng-model="meta.background"
-   ng-style="{{bg_img+bg_color+bg_repeat}}">
-    <section class="container">
+   style="{{meta.background.style}}">
+    <section class="container editor-free">
 			<div sup-angular-wysiwyg ng-model="content"
        defualt="{{_('$_CONTENT')}}"></div>
     </section>
