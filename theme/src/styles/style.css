@@ -136,9 +136,6 @@ mark {
 .shareto > * {
   margin: 0 5px;
 }
-.shareto > a {
-  display: block;
-}
 
 /* GRID: =Masthead
 ----------------------------------------------- */
@@ -381,19 +378,19 @@ mark {
 ----------------------------------------------- */
 .content-block{
   position: relative;
-  margin: 20px auto 0 auto;
+  margin: 0 auto;
   background: #fff;
 }
 .content-block .feature,
-.content-block .page{
+.content-block .page {
   min-height: 300px;
-  padding-top: 40px;
   border-bottom: 1px solid #ccc;
+  overflow: hidden;
 }
 
-.content-block .feature article header,
-.content-block .page article header{
-  margin-top: 60px;
+.content-block .feature header,
+.content-block .page header{
+  margin-top: 40px;
 }
 .content-block header.center{
   text-align: center;
@@ -404,7 +401,11 @@ mark {
 .content-block .imgbox img{
   max-width: 99%;
   height: auto;
-  margin:0 auto;
+  margin: 40px auto;
+}
+.content-block .imgbox img.tight{
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .content-block .pointbox{
 	text-align: center;
@@ -420,7 +421,7 @@ mark {
 	height:65px;
 }
 .content-block .textbox{
-  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .content-block .textbox p{

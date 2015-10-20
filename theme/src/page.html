@@ -2,10 +2,12 @@
 <div class="page">
   <section class="container">
     <div class="row">
+      {% if page.featured_img %}
       <div class="col-md-12 imgbox">
         <img src="{{page.featured_img.src or g.default_featured_img}}"
          alt="{{page.title}}" />
       </div>
+      {% endif %}
       <div class="col-md-12 textbox">
         <header>
           <h2>{{page.title}}</h2>

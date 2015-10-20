@@ -3,10 +3,8 @@
     <div class="container">
       {% if socials %}
       <div class="shareto" id="shareto">
-        {% for social in socials %}
-        <img src="{{theme_url}}/styles/ico_tumblr.png" alt="tumblr" />
-        <img src="{{theme_url}}/styles/ico_facebook.png" alt="facebook" />
-        <img src="{{theme_url}}/styles/ico_tweet.png" alt="tweet" />
+        {% for social in socials if social.code %}
+          {{social.code}}
         {% endfor %}
       </div>
       {% endif %}
