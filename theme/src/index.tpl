@@ -41,7 +41,7 @@
 </header>
 <!-- #Header -->
 <!-- Main -->
-<section id="main" data-offset="100">
+<section id="main">
   <div class="container">
     <div id="brand">
       <div class="logo" sup-editor-media ng-model="meta.logo">

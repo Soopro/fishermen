@@ -28,7 +28,7 @@
          background.repeat :'';}}"></sup-set>
 
 <article id="meta.alias" class="content-block">
-  <div class="feature {{meta.background.class}}"
+  <div class="feature {{meta.background.class || ''}}"
    sup-editor-widget-bg ng-model="meta.background"
    ng-style="{{bg_img+bg_color+bg_repeat}}">
     <div class="container">
@@ -44,9 +44,10 @@
            default="{{_('$_CONTENT')}}"></div>
         </div>
         <div class="col-md-6 pull-left imgbox">
-          <div sup-editor-media ng-model="meta.featured_img">
-            <img src="meta.featured_img.src || g.default_featured_img" />
-          </div>
+          <span sup-editor-media ng-model="meta.featured_img">
+            <img ng-src="{{meta.featured_img.src || g.default_featured_img}}"
+             class="{{meta.featured_img.class || ''}}"/>
+          </span>
         </div>
       </section>
     </div>

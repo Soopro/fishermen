@@ -15,10 +15,6 @@
     "error_404": "404"
   },
   
-  "content_types":[
-    {"alias":"works", "title":"Portfolio"}
-  ],
-  
   "mode": 1,
   
 	"options":{
