@@ -14,8 +14,15 @@
           </div>
           {% endif %}
           {% if media.src %}
-          <img class="{{media.class}}" src="{{media.src}}"
-         alt="{{media.title or 'media'}}" />
+            {% if media.link %}
+            <a href="{{media.link | url}}" target="{{media.target}}">
+              <img class="{{media.class}}" src="{{media.src}}"
+               alt="{{media.title or 'media'}}" />
+            </a>
+            {% else %}
+            <img class="{{media.class}}" src="{{media.src}}"
+             alt="{{media.title or 'media'}}" />
+            {% endif %}
           {% endif %}
         </div>
         {% endfor %}
