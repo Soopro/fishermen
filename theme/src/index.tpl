@@ -60,7 +60,7 @@
         </h1>
         <h2>
           <span sup-editor-meta ng-model="meta.subtitle"
-           default="{{_('Description text here')}}"></span>
+           default="{{_('Subtitle text here')}}"></span>
         </h2>
       </div>
       <div id="get-link" sup-editor-widget-script ng-model="meta.form">
@@ -71,13 +71,13 @@
             <div class="col-sm-8">
               <!-- Phone Number -->
               <input id="phone" type="text" name="phone" title="Phone:"
-               placeholder="Phone number"
+               placeholder="{{_('Phone number')}}"
                class="form-control phone-number">
               <!-- #Phone Number -->
             </div>
             <div class="col-sm-4">
               <button class="btn btn-primary btn-block">
-                {{_e('Get Link')}}
+                {{_('Get Link')}}
               </button>
             </div>
           </div>

@@ -21,21 +21,21 @@
 			<div sup-angular-wysiwyg ng-model="content">
         <div class="row">
           <div class="col-sm-4 pointbox">
-            <h3>{{_e('Column Title')}}</h3>
+            <h3>{{_('Column Title')}}</h3>
             <div>
-              <p>{{_e('$_COL_CONTENT')}}</p>
+              <p>{{_('$_COL_CONTENT')}}</p>
             </div>
           </div>
           <div class="col-sm-4 pointbox">
-            <h3>{{_e('Column Title')}}</h3>
+            <h3>{{_('Column Title')}}</h3>
             <div>
-              <p>{{_e('$_COL_CONTENT')}}</p>
+              <p>{{_('$_COL_CONTENT')}}</p>
             </div>
           </div>
           <div class="col-sm-4 pointbox">
-            <h3>{{_e('Column Title')}}</h3>
+            <h3>{{_('Column Title')}}</h3>
             <div>
-              <p>{{_e('$_COL_CONTENT')}}</p>
+              <p>{{_('$_COL_CONTENT')}}</p>
             </div>
           </div>
         </div>

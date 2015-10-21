@@ -31,9 +31,17 @@ msgstr "错误404"
 msgid "$_ERROR404"
 msgstr "<p>没办法找到你要打开的页面，你大概搞错了页面网址，或者是我们的系统挂了。总之，你只能点击下面的按钮返回。</p>"
 
-#: *.tpl
+#: index.tpl:80
 msgid "Get Link"
 msgstr "获取链接"
+
+#: index.tpl:74
+msgid "Phone number"
+msgstr "电话号码"
+
+#: index.tpl:74
+msgid "Subtitle text here"
+msgstr "在这里填写副标题文字"
 
 #: *.tpl
 msgid "Title"
@@ -58,3 +66,4 @@ msgstr "这是一端分列的富文本内容，您可以简单修改这部分的
 #: gallery_feature.tpl:34
 msgid "$_CAPTION"
 msgstr "这是图片的说明文字。它通常是一到两句话。您可以在编辑图册的时候编写它。"
+
