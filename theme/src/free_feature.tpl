@@ -14,30 +14,33 @@
 <div class="editor-gap-top"></div>
 <!-- Content Block -->
 <article id="meta.alias" class="content-block">
-  <div class="page {{meta.background.class}}"
+  <div class="feature {{meta.background.class}}"
    sup-editor-widget-bg ng-model="meta.background"
    style="{{meta.background.style}}">
-	  <section class="container">
-      <div class="row">
-        <div class="col-md-12 imgbox">
-          <div sup-inline-block>
-            <div sup-editor-media ng-model="meta.featured_img">
-              <img ng-src="{{meta.featured_img.src || g.default_featured_img}}"
-               class="{{meta.featured_img.class}}"/>
+    <section class="container">
+			<div sup-angular-wysiwyg ng-model="content">
+        <div class="row">
+          <div class="col-sm-4 pointbox">
+            <h3>{{_e('Column Title')}}</h3>
+            <div>
+              <p>{{_e('$_COL_CONTENT')}}</p>
+            </div>
+          </div>
+          <div class="col-sm-4 pointbox">
+            <h3>{{_e('Column Title')}}</h3>
+            <div>
+              <p>{{_e('$_COL_CONTENT')}}</p>
+            </div>
+          </div>
+          <div class="col-sm-4 pointbox">
+            <h3>{{_e('Column Title')}}</h3>
+            <div>
+              <p>{{_e('$_COL_CONTENT')}}</p>
             </div>
           </div>
         </div>
-        <div class="col-md-12 textbox">
-          <header class="text-center">
-            <h2 sup-editor-meta ng-model="meta.title"
-             default="{{_('Title')}}"></h2>
-          </header>
-          <div class="content text-center"
-           sup-angular-wysiwyg ng-model="content"
-           default="{{_('$_CONTENT')}}"></div>
-        </div>
       </div>
-	  </section>
+    </section>
   </div>
 </article>
 <!-- #Content Block -->

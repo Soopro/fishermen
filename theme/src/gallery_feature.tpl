@@ -1,5 +1,7 @@
 <sup-set ng-model="g.default_featured_img"
          value="{{theme_url+'/styles/default_featured_img.png'}}"></sup-set>
+<sup-set ng-model="g.default_thumbnail"
+         value="{{theme_url+'/styles/default_thumbnail.png'}}"></sup-set>
 
 <!-- Webfonts -->
 <link ng-href='{{theme_url}}/styles/fonts/lato.css'
@@ -18,23 +20,24 @@
    sup-editor-widget-bg ng-model="meta.background"
    style="{{meta.background.style}}">
     <section class="container">
-      <div class="row">
-        <div class="col-md-6 pull-right textbox">
-          <header>
-            <h2 sup-editor-meta ng-model="meta.title"
-             default="{{_('Title')}}"></h2>
-          </header>
-          <div sup-angular-wysiwyg ng-model="content"
-           default="{{_('$_CONTENT')}}"></div>
+      <div class="row" sup-editor-widget-gallery ng-model="meta.gallery">
+        <div class="col-sm-4 pointbox" ng-repeat="media in meta.gallery"
+         ng-if="meta.gallery.length > 0">
+          <h3 ng-if="media.title">{{media.title}}</h3>
+          <p ng-if="media.caption">{{media.caption}}</p>
+          <img class="{{media.class}}" ng-if="media.src"
+           ng-src="{{media.src}}" alt="media" />
         </div>
-        <div class="col-md-6 pull-left imgbox">
-          <div sup-editor-media ng-model="meta.featured_img">
-            <img ng-src="{{meta.featured_img.src || g.default_featured_img}}"
-             class="{{meta.featured_img.class}}"/>
+        <div class="col-sm-4 pointbox" ng-repeat="media in [1,2,3]"
+         ng-if="meta.gallery.length <= 0 || !meta.gallery">
+          <h3>{{_('Title')}}</h3>
+          <div class="caption">
+            <p>{{_('$_CAPTION')}}</p>
           </div>
+          <img ng-src="{{g.default_thumbnail}}" alt="media" />
         </div>
       </div>
     </section>
-	</div>
+  </div>
 </article>
 <!-- #Content Block -->

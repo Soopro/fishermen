@@ -77,7 +77,7 @@
             </div>
             <div class="col-sm-4">
               <button class="btn btn-primary btn-block">
-                Get Link
+                {{_e('Get Link')}}
               </button>
             </div>
           </div>

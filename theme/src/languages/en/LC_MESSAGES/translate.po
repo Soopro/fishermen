@@ -11,10 +11,18 @@ msgstr ""
 "Language: en_US\n"
 "X-Generator: Poedit 1.7.4\n"
 
-#: error_404.tpl:57
+#: error_404.tpl:26
 msgid "$_ERROR404"
 msgstr "<p>We can not find the page you are looking for. Maybe the address of the page was wrong. Anyway, click the button below to return.</p>"
 
-#: page.tpl:57
+#: *.tpl
 msgid "$_CONTENT"
 msgstr "<p>This section is the default rich text content, you can re-fill their own needs. After entering rich text edit mode, an input toolbar will appear (it is usually at top of the screen or above the rich text field), using the toolbar to insert, replace or remove images and links.</p>"
+
+#: free_feature.tpl:26
+msgid "$_COL_CONTENT"
+msgstr "This is a rich text content in columns, you can simply modify the text each columns. If you need to modify the layout, please open the source code mode from editor toolbar."
+
+#: gallery_feature.tpl:34
+msgid "$_CAPTION"
+msgstr "This is a media caption text. It usually one to two sentences long. You can write it when editing gallery."

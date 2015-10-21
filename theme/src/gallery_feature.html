@@ -1,0 +1,27 @@
+{% if g and page %}
+<div class="feature {{page.background.class}}"
+ style="{{page.background.style}}">
+    <section class="container">
+      <div class="row">
+        {% for media in page.gallery %}
+        <div class="col-sm-4 pointbox">
+          {% if media.title %}
+          <h3>{{media.title}}</h3>
+          {% endif %}
+          {% if media.caption %}
+          <div class="caption">
+            <p>{{media.caption}}</p>
+          </div>
+          {% endif %}
+          {% if media.src %}
+          <img class="{{media.class}}" src="{{media.src}}"
+         alt="{{media.title or 'media'}}" />
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+</div>
+{% else %}
+<script>window.location.replace('{{base_url}}/#/{{meta.alias}}');</script>
+{% endif %}

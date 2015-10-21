@@ -1,5 +1,5 @@
 {
-	"version":"1.0.1",
+	"version":"1.1.0",
   "alias":"fisherman",
 	"title":"Fisherman",
   "author":"Redy Ru",
@@ -29,9 +29,13 @@
       "en":"Feature #3",
       "zh":"特性页面 #3"
     },
-    "feature_free":{
-      "en":"Feature #4",
-      "zh":"特性页面 #4"
+    "free_feature":{
+      "en":"Feature Free",
+      "zh":"自由特性页"
+    },
+    "gallery_feature":{
+      "en":"Feature Gallery",
+      "zh":"图册特性页"
     },
     "error_404": "404"
   },

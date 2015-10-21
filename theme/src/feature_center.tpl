@@ -11,14 +11,14 @@
 <link ng-href="{{theme_url}}/styles/style.css" 
  rel='stylesheet' type='text/css'>
 
-
+<div class="editor-gap-top"></div>
 <!-- Content Block -->
 <article id="meta.alias" class="content-block">
   <div class="feature {{meta.background.class}}"
    sup-editor-widget-bg ng-model="meta.background"
    style="{{meta.background.style}}">
-    <div class="container editor-space-top">
-      <section class="row">
+    <section class="container">
+      <div class="row">
         <div class="col-md-12">
           <header class="center">
             <h2 sup-editor-meta ng-model="meta.title"
@@ -35,8 +35,8 @@
              class="{{meta.featured_img.class}}"/>
           </span>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   </div>
 </article>
 <!-- #Content Block -->

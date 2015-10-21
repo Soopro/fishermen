@@ -1,9 +1,9 @@
 {% if g and page %}
 <div class="feature {{page.background.class}}"
  style="{{page.background.style}}">
-    <div class="container">
+    <section class="container">
       {{page.content}}
-    </div>
+    </section>
 </div>
 {% else %}
 <script>window.location.replace('{{base_url}}/#/{{meta.alias}}');</script>

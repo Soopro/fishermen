@@ -80,7 +80,10 @@ html, body{
   background-color: #fff;
 }
 body, div, a, ul li, button, h1,h2,h3,h4,h5, p{
-	font-family: 'Lato', sans-serif;
+  font-family: 'Lato',
+               'Hiragino Sans GB', 'Microsoft YaHei', 'STHeiti',
+               'Helvetica Neue', Helvetica,
+               Arial, 'Lucida Grande', sans-serif;
 	color:#333;
 }
 .cover{
@@ -387,7 +390,6 @@ mark {
 .content-block .page {
   min-height: 300px;
   border-bottom: 1px solid #ccc;
-  overflow: hidden;
 }
 
 .content-block .feature header,
@@ -399,6 +401,7 @@ mark {
 }
 .content-block .imgbox {
   text-align: center;
+  overflow: hidden;
 }
 .content-block .imgbox img{
   max-width: 99%;
@@ -419,9 +422,7 @@ mark {
   height: auto;
   margin: 0 auto;
 }
-.content-block .pointbox h3{
-	height:65px;
-}
+
 .content-block .textbox{
   padding-bottom: 40px;
 }
@@ -437,6 +438,9 @@ mark {
   text-align: center;
 }
 
+.content-block .caption {
+  padding: 0 16px;
+}
 
 /* GRID: =Footer
 ----------------------------------------------- */
@@ -467,8 +471,9 @@ mark {
 .sup-editor-canvas body {
   height: 100%;
 }
-.sup-editor-canvas .editor-space-top {
+.sup-editor-canvas .editor-gap-top {
   padding-top: 60px;
+  border-bottom: 1px solid #ccc;
 }
 /* RESPONSIVE
 ----------------------------------------------- 
@@ -551,26 +556,6 @@ Lastly, apply responsive CSS fixes as necessary
 
 /* Languages
 /* ----------------------------------------------- */
-
-html[lang^="zh"] body,
-html[lang^="zh"] div,
-html[lang^="zh"] a,
-html[lang^="zh"] ul li,
-html[lang^="zh"] button,
-html[lang^="zh"] h1,
-html[lang^="zh"] h2,
-html[lang^="zh"] h3,
-html[lang^="zh"] h4,
-html[lang^="zh"] h5,
-html[lang^="zh"] h6,
-html[lang^="zh"] p,
-html[lang^="zh"] label {
-  font-family: 'Open Sans',
-               'Hiragino Sans GB', 'Microsoft YaHei', 'STHeiti',
-               'Helvetica Neue', Helvetica,
-               Arial, 'Lucida Grande', sans-serif;
-}
-
 
 @media screen and (max-width: 767px) {
   html[lang^="zh"] #features h2 {
