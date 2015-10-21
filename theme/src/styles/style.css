@@ -84,8 +84,7 @@ body, div, a, ul li, button, h1,h2,h3,h4,h5, p{
 	color:#333;
 }
 .cover{
-  height: 100%;
-  width: 100%;
+  min-height: 100%;
 	background: #f5f5f5 url('bg.jpg') no-repeat fixed center center;
 	background-size:cover;
 }
@@ -406,7 +405,7 @@ mark {
   height: auto;
   margin: 40px auto;
 }
-.content-block .imgbox img.tight{
+.content-block .imgbox img.tie{
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -464,7 +463,11 @@ mark {
 
 /* EDITOR
 ----------------------------------------------- */
-.editor-free {
+.sup-editor-canvas,
+.sup-editor-canvas body {
+  height: 100%;
+}
+.sup-editor-canvas .editor-space-top {
   padding-top: 60px;
 }
 /* RESPONSIVE

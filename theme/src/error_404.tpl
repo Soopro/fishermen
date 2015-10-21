@@ -13,18 +13,10 @@
 
 
 <!-- Content Block -->
-<article id="meta.alias" class="content-block error-404">
+<article class="content-block error-404">
   <div class="page">
-	  <section class="container">
+    <section class="container">
       <div class="row">
-        <div class="col-md-12 imgbox">
-          <div sup-inline-block>
-            <div sup-editor-media ng-model="meta.featured_img">
-              <img ng-src="{{meta.featured_img.src || g.default_featured_img}}"
-               class="{{meta.featured_img.class || ''}}"/>
-            </div>
-          </div>
-        </div>
         <div class="col-md-12 textbox">
           <header>
             <h2 sup-editor-meta ng-model="meta.title"
@@ -34,7 +26,7 @@
            default="{{_('$_ERROR404')}}"></div>
         </div>
       </div>
-	  </section>
+    </section>
   </div>
 </article>
 <!-- #Content Block -->

@@ -17,7 +17,7 @@
   <div class="feature {{meta.background.class}}"
    sup-editor-widget-bg ng-model="meta.background"
    style="{{meta.background.style}}">
-    <div class="container">
+    <div class="container editor-space-top">
       <section class="row">
         <div class="col-md-12">
           <header class="center">
@@ -32,7 +32,7 @@
         <div class="col-md-6 pull-left imgbox">
           <span sup-editor-media ng-model="meta.featured_img">
             <img ng-src="{{meta.featured_img.src || g.default_featured_img}}"
-             class="{{meta.featured_img.class || ''}}"/>
+             class="{{meta.featured_img.class}}"/>
           </span>
         </div>
       </section>

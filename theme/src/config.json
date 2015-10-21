@@ -18,20 +18,20 @@
       "zh":"静态页"
     },
     "feature_left":{
-      "en":"Feature(Left)",
-      "zh":"特性页面(左图)"
+      "en":"Feature #1",
+      "zh":"特性页面 #1"
     },
     "feature_right":{
-      "en":"Feature(Right)",
-      "zh":"特性页面(右图)"
+      "en":"Feature #2",
+      "zh":"特性页面 #2"
     },
-    "feature_bottom":{
-      "en":"Feature(Bottom)",
-      "zh":"特性页面(下图)"
+    "feature_center":{
+      "en":"Feature #3",
+      "zh":"特性页面 #3"
     },
     "feature_free":{
-      "en":"Feature(Free)",
-      "zh":"特性页面(任意)"
+      "en":"Feature #4",
+      "zh":"特性页面 #4"
     },
     "error_404": "404"
   },

@@ -17,7 +17,7 @@
   <div class="feature {{meta.background.class}}"
    sup-editor-widget-bg ng-model="meta.background"
    style="{{meta.background.style}}">
-    <section class="container editor-free">
+    <section class="container editor-space-top">
 			<div sup-angular-wysiwyg ng-model="content"
        defualt="{{_('$_CONTENT')}}"></div>
     </section>
