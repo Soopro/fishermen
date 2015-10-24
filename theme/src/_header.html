@@ -17,7 +17,7 @@
        <ul class="nav navbar-nav">
 				 {% for nav in menu.primary %}
           <li>
-						<a href="{{nav.link}}" target="{{nav.target}}"
+						<a href="{{nav.link | url}}" target="{{nav.target}}"
              class="parallax-link">{{nav.title}}</a>
 					</li>
 				 {% endfor %}
