@@ -29,7 +29,7 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li ng-repeat="nav in menu.primary">
-              <a href="#" fake>{{nav.title}}</a>
+              <a href="#" class="parallax-link {{nav.meta.class}}">{{nav.title}}</a>
             </li>
             <li ng-if="translates">
               <a href="#" class="language">

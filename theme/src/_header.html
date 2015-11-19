@@ -18,7 +18,7 @@
 				 {% for nav in menu.primary %}
           <li>
 						<a href="{{nav.link | url}}" target="{{nav.target}}"
-             class="parallax-link">{{nav.title}}</a>
+             class="parallax-link {{nav.meta.class}}">{{nav.title}}</a>
 					</li>
 				 {% endfor %}
 				 {% if translates %}
