@@ -1,3 +1,17 @@
+if(navigator.languages && navigator.languages.length > 1){
+  navigator_language = navigator.languages[0];
+}else{
+  navigator_language = navigator.language || navigator.userLanguage;
+}
+
+var userLang = navigator_language;
+var userLocale = userLang.replace('-','_');
+
+//fix old browser no console
+if (!window.console) {
+	window["console"] = {log: function(){}};
+}
+
 var language_texts = {
   "en":"Languages",
   "zh":"语言",
