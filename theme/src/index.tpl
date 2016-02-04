@@ -65,7 +65,7 @@
       </div>
       <div id="get-link" sup-editor-widget-script ng-model="meta.form">
         <form action="mailto:mail@youremail.com" sup-mailform>
-          <input type="hidden" name="subject" value="Get&nbsp;Fisherman">
+          <input type="hidden" name="subject" value="Get-Fisherman">
           <input type="hidden" name="message" value="I want get a Fisherman">
           <div class="form-group row">
             <div class="col-sm-8">
