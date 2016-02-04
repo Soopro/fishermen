@@ -414,7 +414,8 @@ mark {
 }
 .content-block .pointbox{
 	text-align: center;
-	margin-bottom:50px;
+  margin-top:50px;
+  margin-bottom:50px;
 }
 
 .content-block .pointbox img{
