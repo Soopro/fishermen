@@ -29,7 +29,9 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li ng-repeat="nav in menu.primary">
-              <a href="#" class="parallax-link {{nav.meta.class}}">{{nav.title}}</a>
+              <a href="#" class="parallax-link {{nav.meta.class}}">
+                {{nav.title}}
+              </a>
             </li>
             <li ng-if="translates">
               <a href="#" class="language">
@@ -49,7 +51,7 @@
     <div class="container">
       <div id="brand">
         <div class="logo">
-          <div sup-editor-media ng-model="meta.logo">
+          <div sup-pos-outer="top" sup-editor-media ng-model="meta.logo">
             <img ng-src="{{meta.logo.src || site_meta.logo || g.default_logo}}"
              alt="{{site_meta.title}}" />
           </div>
