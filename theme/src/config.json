@@ -1,7 +1,7 @@
 {
 	"version":"1.1.5",
-  "alias":"fisherman",
-	"title":"Fisherman",
+  "alias":"fishermen",
+	"title":"Fishermen",
   "author":"Redy Ru",
 	"thumbnail":"thumbnail.png",
   "capabilities":["ws"],
