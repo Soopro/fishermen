@@ -51,7 +51,7 @@
     <div class="container">
       <div id="brand">
         <div class="logo">
-          <div sup-pos-outer="top" sup-editor-media ng-model="meta.logo">
+          <div sup-ico-pos="out top" sup-editor-media ng-model="meta.logo">
             <img ng-src="{{meta.logo.src || site_meta.logo || g.default_logo}}"
              alt="{{site_meta.title}}" />
           </div>
