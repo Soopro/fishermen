@@ -131,7 +131,11 @@ mark {
 	color:#690;
 	background:none;
 }
-
+img,
+embed,
+iframe {
+  max-width: 100%;
+}
 .shareto {
   margin: 0 auto;
   max-width: 400px;
@@ -141,6 +145,7 @@ mark {
 .shareto > * {
   margin: 0 5px;
 }
+
 
 /* GRID: =Masthead
 ----------------------------------------------- */
