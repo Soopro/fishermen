@@ -132,6 +132,8 @@ mark {
 	background:none;
 }
 img,
+video,
+audio,
 embed,
 iframe {
   max-width: 100%;
