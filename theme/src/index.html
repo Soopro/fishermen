@@ -58,7 +58,7 @@
 	<article id="{{page.alias}}" class="content-block">
 		{% if page.template != 'index' and page.template %}
 			<!-- Section Block -->
-			{% include page.template+".html" %}
+			{% include page.template+".html" ignore missing %}
 			<!-- #Section Block -->
 		{% endif %}
 	</article>
