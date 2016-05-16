@@ -13,7 +13,7 @@
 
 <div class="editor-gap-top"></div>
 <!-- Content Block -->
-<article id="meta.alias" class="content-block">
+<article id="{{meta.slug}}" class="content-block">
   <div class="feature {{meta.background.class}}"
    sup-editor-widget-bg ng-model="meta.background"
    style="{{meta.background.style}}">

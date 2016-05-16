@@ -55,7 +55,7 @@
 	<!-- #Main -->
 	{% for page in pages| type('page') if not page.is_front %}
 	<!-- Section -->
-	<article id="{{page.alias}}" class="content-block">
+	<article id="{{page.slug}}" class="content-block">
 		{% if page.template != 'index' and page.template %}
 			<!-- Section Block -->
 			{% include page.template+".html" ignore missing %}

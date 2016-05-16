@@ -1,6 +1,6 @@
 {
-	"version":"1.1.6",
-  "alias":"fishermen",
+	"version":"1.2.0",
+  "slug":"fishermen",
 	"title":"Fishermen",
   "author":"Redy Ru",
   "capabilities":["ws"],

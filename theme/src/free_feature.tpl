@@ -8,12 +8,12 @@
 <link ng-href="{{theme_url}}/libs/bootstrap/bootstrap.min.css"
  rel='stylesheet' type='text/css'>
 <!-- Styles-->
-<link ng-href="{{theme_url}}/styles/style.css" 
+<link ng-href="{{theme_url}}/styles/style.css"
  rel='stylesheet' type='text/css'>
 
 <div class="editor-gap-top"></div>
 <!-- Content Block -->
-<article id="meta.alias" class="content-block">
+<article id="{{meta.slug}}" class="content-block">
   <div class="feature {{meta.background.class}}"
    sup-editor-widget-bg ng-model="meta.background"
    style="{{meta.background.style}}">
