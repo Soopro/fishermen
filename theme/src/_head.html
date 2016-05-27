@@ -1,15 +1,15 @@
 <head>
-<title>{{site_title}} | {{meta.description}}</title>
-
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>
+  {{ site_meta.title | striptags }} | {{ meta.title | striptags }}
+</title>
 <meta name="description" content="{{ meta.description | striptags }}">
-<meta name="robots" content="{{ g.robots }}">
 <meta name="author" content="{{ meta.author | striptags }}">
 
 {% include '_app_metas_.html' %}
 
 <!-- Browser support -->
-<meta name="viewport" 
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -18,7 +18,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="format-detection" content="telephone=yes">
 <meta name="renderer" content="webkit">
-
+<meta name="robots" content="{{ g.robots }}">
 
 <!-- Favicons -->
 <link href="{{site_meta.favicon or g.default_favicon}}"
