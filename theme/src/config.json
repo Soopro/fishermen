@@ -1,5 +1,5 @@
 {
-	"version":"1.2.0",
+	"version":"1.3.0",
   "slug":"fishermen",
 	"title":"Fishermen",
   "author":"Redy Ru",
@@ -40,11 +40,8 @@
     "gallery_feature":{
       "en":"Feature Gallery",
       "zh":"图册特性页"
-    },
-    "error_404": "404"
+    }
   },
-
-  "mode": 1,
 
 	"options":{
 		"sortby":"date",
