@@ -11,7 +11,7 @@
 <link ng-href="{{theme_url}}/libs/bootstrap/bootstrap.min.css"
  rel='stylesheet' type='text/css'>
 <!-- Styles-->
-<link ng-href="{{theme_url}}/styles/style.css" 
+<link ng-href="{{theme_url}}/styles/style.css"
  rel='stylesheet' type='text/css'>
 
 <div class="cover">
@@ -85,7 +85,7 @@
           </div>
         </form>
       </div>
-      <div>	
+      <div>
         <div id="excerpt">
           <p sup-editor-meta ng-model="meta.description"
            default="{{_('Description text here')}}"></p>
