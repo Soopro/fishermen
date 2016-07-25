@@ -17,10 +17,10 @@
 <!-- Content Block -->
 <article id="{{meta.slug}}" class="content-block">
   <div class="feature {{meta.background.class}}"
-   sup-editor-widget-bg ng-model="meta.background"
+   sup-widget-bg ng-model="meta.background"
    style="{{meta.background.style}}">
     <section class="container">
-      <div class="row" sup-editor-widget-gallery ng-model="meta.gallery">
+      <div class="row" sup-widget-gallery ng-model="meta.gallery">
         <div class="col-sm-4 pointbox" ng-repeat="media in meta.gallery"
          ng-if="meta.gallery.length > 0">
           <h3 ng-if="media.title">{{media.title}}</h3>

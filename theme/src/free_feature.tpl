@@ -15,7 +15,7 @@
 <!-- Content Block -->
 <article id="{{meta.slug}}" class="content-block">
   <div class="feature {{meta.background.class}}"
-   sup-editor-widget-bg ng-model="meta.background"
+   sup-widget-bg ng-model="meta.background"
    style="{{meta.background.style}}">
     <section class="container">
 			<div sup-angular-wysiwyg ng-model="content">

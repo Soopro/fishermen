@@ -51,31 +51,38 @@
     <div class="container">
       <div id="brand">
         <div class="logo">
-          <div sup-ico-pos="out top" sup-editor-media ng-model="meta.logo">
+          <div sup-ico-pos="out top" sup-widget-media ng-model="meta.logo">
             <img ng-src="{{meta.logo.src || site_meta.logo || g.default_logo}}"
              alt="{{site_meta.title}}" />
           </div>
         </div>
         <h1>
-          <span sup-editor-meta ng-model="meta.title"
+          <span sup-widget-text ng-model="meta.title"
            default="{{_('Title')}}"></span>
         </h1>
         <h2>
-          <span sup-editor-meta ng-model="meta.subtitle"
+          <span sup-widget-text ng-model="meta.subtitle"
            default="{{_('Subtitle text here')}}"></span>
         </h2>
       </div>
-      <div id="get-link" sup-editor-widget-script ng-model="meta.form">
-        <form action="mailto:mail@youremail.com" sup-mailform>
-          <input type="hidden" name="subject" value="Get-Fisherman">
-          <input type="hidden" name="message" value="I want get a Fisherman">
+      <div id="get-link" sup-widget-attrs
+                         structure="[
+                         {key:'email', 'name':_('Email'), 'default': ''},
+                         {key:'subject', 'name':_('Subject'), 'default': 'Get-Fisherman'},
+                                     :,
+                                     'message':'I want get a Fisherman'
+                         ]"
+                         ng-model="meta.mailto">
+        <form action="{{meta.mailto.email}}">
+          <input type="hidden" name="subject" value="{{meta.mailto.subject}}">
+          <input type="hidden" name="message" value="{{meta.mailto.message}}">
           <div class="form-group row">
             <div class="col-sm-8">
-              <!-- Phone Number -->
-              <input id="phone" type="text" name="phone" title="Phone:"
-               placeholder="{{_('Phone number')}}"
-               class="form-control phone-number">
-              <!-- #Phone Number -->
+              <!-- email -->
+              <input id="email" type="email" name="email"
+               placeholder="{{_('Email Address here')}}"
+               class="form-control email">
+               <!-- #email -->
             </div>
             <div class="col-sm-4">
               <button class="btn btn-primary btn-block">
@@ -87,26 +94,26 @@
       </div>
       <div>
         <div id="excerpt">
-          <p sup-editor-meta ng-model="meta.description"
+          <p sup-widget-text ng-model="meta.description"
            default="{{_('Description text here')}}"></p>
         </div>
         <div id="store">
           <div class="row">
             <div class="col-sm-4">
               <a href="{{meta.app_android.link || '#'}}" class="flag"
-               sup-editor-widget-button ng-model="meta.app_android">
+               sup-widget-button ng-model="meta.app_android">
                 <span class="android"></span>
               </a>
             </div>
             <div class="col-sm-4">
               <a href="{{meta.app_ios.link || '#'}}" class="flag"
-               sup-editor-widget-button ng-model="meta.app_ios">
+               sup-widget-button ng-model="meta.app_ios">
                 <span class="apple"></span>
               </a>
             </div>
             <div class="col-sm-4">
               <a href="{{meta.app_wp.link || '#'}}" class="flag"
-               sup-editor-widget-button ng-model="meta.app_wp">
+               sup-widget-button ng-model="meta.app_wp">
                 <span class="wphone"></span>
               </a>
             </div>
