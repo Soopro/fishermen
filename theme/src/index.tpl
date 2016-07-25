@@ -66,13 +66,33 @@
         </h2>
       </div>
       <div id="get-link" sup-widget-attrs
+                         ng-model="meta.mailto"
                          structure="[
-                         {key:'email', 'name':_('Email'), 'default': ''},
-                         {key:'subject', 'name':_('Subject'), 'default': 'Get-Fisherman'},
-                                     :,
-                                     'message':'I want get a Fisherman'
-                         ]"
-                         ng-model="meta.mailto">
+                           {
+                             'key': 'email',
+                             'name': _('Email'),
+                             'type': 'text',
+                             'default': '',
+                           },
+                           {
+                             'key': 'subject',
+                             'name': _('Subject'),
+                             'type': 'text'
+                             'default': _('Get-Fisherman')
+                           },
+                           {
+                             'key': 'message',
+                             'name': _('Message'),
+                             'type': 'text',
+                             'default': _('I want get a Fisherman')
+                           },
+                           {
+                             'key': 'btn_text',
+                             'name': _('Button Text'),
+                             'type': 'text',
+                             'default': _('Get Link')
+                           }
+                         ]">
         <form action="{{meta.mailto.email}}">
           <input type="hidden" name="subject" value="{{meta.mailto.subject}}">
           <input type="hidden" name="message" value="{{meta.mailto.message}}">
@@ -86,7 +106,7 @@
             </div>
             <div class="col-sm-4">
               <button class="btn btn-primary btn-block">
-                {{_('Get Link')}}
+                {{meta.mailto.btn_text}}
               </button>
             </div>
           </div>
