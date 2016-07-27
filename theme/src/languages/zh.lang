@@ -1,6 +1,6 @@
 [
   {"Language":"zh"},
-  
+
   {
     "msgid": "More",
     "msgstr": "更多"
@@ -26,8 +26,12 @@
     "msgstr": "获取链接"
   },
   {
-    "msgid": "Phone number",
-    "msgstr": "电话号码"
+    "msgid": "Message text here.",
+    "msgstr": "在这里写消息文本。"
+  },
+  {
+    "msgid": "Subject text here.",
+    "msgstr": "在这里写题目文本。"
   },
   {
     "msgid": "Subtitle text here",
@@ -36,6 +40,10 @@
   {
     "msgid": "Description text here",
     "msgstr": "在这里填写简述内容"
+  },
+  {
+    "msgid": "Email Address here",
+    "msgstr": "在这里填写电子邮件地址"
   },
   {
     "msgid": "Column Title",

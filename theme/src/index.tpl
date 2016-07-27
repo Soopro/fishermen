@@ -1,20 +1,10 @@
-<sup-set ng-model="g.default_logo"
-         value="{{theme_url+'/styles/logo.png'}}"></sup-set>
+{% import 'g.tpl' %}
+{% include '_css.tpl' %}
 
-<sup-set ng-model="g.default_featured_img"
-         value="{{theme_url+'/styles/default_featured_img.png'}}"></sup-set>
-
-<!-- Webfonts -->
-<link ng-href='{{theme_url}}/styles/fonts/lato.css'
- rel='stylesheet' type='text/css'>
-<!-- Bootstrap core CSS -->
-<link ng-href="{{theme_url}}/libs/bootstrap/bootstrap.min.css"
- rel='stylesheet' type='text/css'>
-<!-- Styles-->
-<link ng-href="{{theme_url}}/styles/style.css"
- rel='stylesheet' type='text/css'>
-
-<div class="cover">
+<div class="cover {{meta.hero.class}}"
+     style="{{meta.hero.style}}"
+     sup-widget-bg
+     ng-model="meta.hero">
   <!-- Header -->
   <header id="masthead">
     <nav class="container nav-primary">
@@ -51,48 +41,46 @@
     <div class="container">
       <div id="brand">
         <div class="logo">
-          <div sup-ico-pos="out top" sup-widget-media ng-model="meta.logo">
+          <div sup-ico-pos="out top"
+               sup-widget-media
+               ng-model="meta.logo">
             <img ng-src="{{meta.logo.src || site_meta.logo || g.default_logo}}"
-             alt="{{site_meta.title}}" />
+                 alt="{{site_meta.title}}" />
           </div>
         </div>
         <h1>
-          <span sup-widget-text ng-model="meta.title"
-           default="{{_('Title')}}"></span>
+          <span sup-widget-text
+                ng-model="meta.title"
+                default="{{_('Title')}}"></span>
         </h1>
         <h2>
-          <span sup-widget-text ng-model="meta.subtitle"
-           default="{{_('Subtitle text here')}}"></span>
+          <span sup-widget-text
+                ng-model="meta.subtitle"
+                default="{{_('Subtitle text here')}}"></span>
         </h2>
       </div>
-      <div id="get-link" sup-widget-attrs
-                         ng-model="meta.mailto"
-                         structure="[
-                           {
-                             'key': 'email',
-                             'name': _('Email'),
-                             'type': 'text',
-                             'default': '',
-                           },
-                           {
-                             'key': 'subject',
-                             'name': _('Subject'),
-                             'type': 'text'
-                             'default': _('Get-Fisherman')
-                           },
-                           {
-                             'key': 'message',
-                             'name': _('Message'),
-                             'type': 'text',
-                             'default': _('I want get a Fisherman')
-                           },
-                           {
-                             'key': 'btn_text',
-                             'name': _('Button Text'),
-                             'type': 'text',
-                             'default': _('Get Link')
-                           }
-                         ]">
+      <div id="get-link"
+           sup-widget-option
+           ng-model="meta.mailto"
+
+           structure="{
+             'email':{'label': _('Email')},
+
+             'subject':{'label': _('Subject'),
+                        'default': _('Subject text here.')},
+
+             'message':{'label': _('Message'),
+                        'default': _('Message text here.')},
+
+             'btntext':{'label':_('Button Text'),
+                        'default': _('Get Link')},
+
+             'test1':{'label':_('Test'), 'switch':true},
+
+             'test2':{'label':_('Test2'), 'default': 'xxx',
+                      'select':['xxx', _('Title')]},
+           }">
+
         <form action="{{meta.mailto.email}}">
           <input type="hidden" name="subject" value="{{meta.mailto.subject}}">
           <input type="hidden" name="message" value="{{meta.mailto.message}}">
@@ -106,7 +94,7 @@
             </div>
             <div class="col-sm-4">
               <button class="btn btn-primary btn-block">
-                {{meta.mailto.btn_text}}
+                {{meta.mailto.btn_text || _('Get Link')}}
               </button>
             </div>
           </div>
@@ -114,33 +102,46 @@
       </div>
       <div>
         <div id="excerpt">
-          <p sup-widget-text ng-model="meta.description"
-           default="{{_('Description text here')}}"></p>
+          <p>
+            <span sup-widget-text
+                  ng-model="meta.description"
+                  default="{{_('Description text here')}}"></span>
+          </p>
         </div>
         <div id="store">
           <div class="row">
             <div class="col-sm-4">
-              <a href="{{meta.app_android.link || '#'}}" class="flag"
-               sup-widget-button ng-model="meta.app_android">
+              <a class="flag"
+                 ng-class="{'fade': !meta.app_android.link}"
+                 href="#"
+                 sup-widget-button
+                 ng-model="meta.app_android">
                 <span class="android"></span>
               </a>
             </div>
             <div class="col-sm-4">
-              <a href="{{meta.app_ios.link || '#'}}" class="flag"
-               sup-widget-button ng-model="meta.app_ios">
+              <a class="flag"
+                 ng-class="{'fade': !meta.app_ios.link}"
+                 href="#"
+                 sup-widget-button
+                 ng-model="meta.app_ios">
                 <span class="apple"></span>
               </a>
             </div>
             <div class="col-sm-4">
-              <a href="{{meta.app_wp.link || '#'}}" class="flag"
-               sup-widget-button ng-model="meta.app_wp">
+              <a class="flag"
+                 ng-class="{'fade': !meta.app_wp.link}"
+                 href="#"
+                 sup-widget-button
+                 ng-model="meta.app_wp">
                 <span class="wphone"></span>
               </a>
             </div>
           </div>
         </div>
         <div id="gofeatures">
-          <a href="#" class="btn-gofeatures">
+          <a href="#"
+             class="btn-gofeatures">
             {{_('Features')}}
           </a>
         </div>

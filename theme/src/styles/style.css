@@ -86,10 +86,10 @@ body, div, a, ul li, button, h1,h2,h3,h4,h5, p{
                Arial, 'Lucida Grande', sans-serif;
 	color:#333;
 }
-.cover{
+.cover {
   min-height: 100%;
 	background: #f5f5f5 url('bg.jpg') no-repeat fixed center center;
-	background-size:cover;
+	background-size: cover;
 }
 h1{
   font-size: 60pt;
@@ -186,7 +186,7 @@ iframe {
   background: none;
 }
 
-#masthead .nav-primary .navbar { 
+#masthead .nav-primary .navbar {
   text-align:center;
   min-height: 0;
   margin: 0;
@@ -303,6 +303,10 @@ iframe {
   max-width: 500px;
 }
 
+#get-link .form-group > div {
+  padding-bottom: 5px;
+}
+
 
 
 /* MODULE: =Excerpt
@@ -312,7 +316,7 @@ iframe {
   margin: 25px auto;
   text-align: center;
 }
-#excerpt p{
+#excerpt p {
   padding: 0;
   margin: 0;
 }
@@ -333,7 +337,7 @@ iframe {
   border: 0;
   background: #555;
 }
-#store a.flag[href="#"] {
+#store a.flag.fade {
   opacity: 0.2;
   pointer-events: none;
   background: rgba(50,50,50,0.9);
@@ -369,7 +373,7 @@ iframe {
 }
 
 #gofeatures .btn-gofeatures,
-#gofeatures .btn-gofeatures:link, 
+#gofeatures .btn-gofeatures:link,
 #gofeatures .btn-gofeatures:visited{
   margin: 0 auto;
   display: block;
@@ -484,7 +488,7 @@ iframe {
   border-bottom: 1px solid #ccc;
 }
 /* RESPONSIVE
------------------------------------------------ 
+-----------------------------------------------
 Lastly, apply responsive CSS fixes as necessary
 ----------------------------------------------- */
 @media screen{
@@ -504,9 +508,7 @@ Lastly, apply responsive CSS fixes as necessary
 	.navbar-brand{
 		display:block;
 	}
-	#get-link{
-	  display: none;
-	}
+
 	#masthead .navbar .navbar-nav { display:block; float:none; }
 	#masthead .navbar .navbar-nav li{
 	  padding-bottom: 2px;

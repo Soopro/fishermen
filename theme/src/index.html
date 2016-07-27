@@ -3,7 +3,8 @@
 <!DOCTYPE html>
 <html lang="{{lang}}">
 {% include "_head.html" %}
-<body  class="cover" style="{{meta.background.style}}">
+<body class="cover {{meta.hero.class}}"
+      style="{{meta.hero.style}}">
 	<!-- Header -->
 	{% include "_header.html" %}
 	<!-- #Header -->
@@ -29,17 +30,20 @@
       <div id="store">
         <div class="row">
           <div class="col-sm-4">
-            <a href="{{meta.app_android.link | url or '#'}}" class="flag">
+            <a href="{{meta.app_android.link | url}}"
+               class="flag {{'fade' if not meta.app_android.link}}">
               <span class="android"></span>
             </a>
           </div>
           <div class="col-sm-4">
-            <a href="{{meta.app_ios.link | url or '#'}}" class="flag">
+            <a href="{{meta.app_ios.link | url}}"
+               class="flag {{'fade' if not meta.app_ios.link}}">
               <span class="apple"></span>
             </a>
           </div>
           <div class="col-sm-4">
-            <a href="{{meta.app_wp.link | url or '#'}}" class="flag">
+            <a href="{{meta.app_wp.link | url}}"
+               class="flag {{'fade' if not meta.app_wp.link}}">
               <span class="wphone"></span>
             </a>
           </div>
