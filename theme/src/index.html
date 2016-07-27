@@ -19,9 +19,26 @@
         <h1>{{meta.title}}</h1>
   	    <h2>{{meta.subtitle}}</h2>
       </div>
-      {% if meta.script %}
+      {% if meta.mailto.email %}
       <div id="get-link">
-        {{meta.script}}
+        <form action="{{meta.mailto.email}}">
+          <input type="hidden" name="subject" value="{{meta.mailto.subject}}">
+          <input type="hidden" name="message" value="{{meta.mailto.message}}">
+          <div class="form-group row">
+            <div class="col-sm-8">
+              <!-- email -->
+              <input id="email" type="email" name="email"
+               placeholder="{{_('Email Address here')}}"
+               class="form-control email">
+               <!-- #email -->
+            </div>
+            <div class="col-sm-4">
+              <button class="btn btn-primary btn-block">
+                {{meta.mailto.btntext}}
+              </button>
+            </div>
+          </div>
+        </form>
       </div>
       {% endif %}
       <div id="excerpt">

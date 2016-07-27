@@ -74,11 +74,6 @@
 
              'btntext':{'label':_('Button Text'),
                         'default': _('Get Link')},
-
-             'test1':{'label':_('Test'), 'switch':true},
-
-             'test2':{'label':_('Test2'), 'default': 'xxx',
-                      'select':['xxx', _('Title')]},
            }">
 
         <form action="{{meta.mailto.email}}">
@@ -94,12 +89,13 @@
             </div>
             <div class="col-sm-4">
               <button class="btn btn-primary btn-block">
-                {{meta.mailto.btn_text || _('Get Link')}}
+                {{meta.mailto.btntext}}
               </button>
             </div>
           </div>
         </form>
       </div>
+
       <div>
         <div id="excerpt">
           <p>
