@@ -74,8 +74,8 @@
     </div>
   </section>
 	<!-- #Main -->
-  {% set pages = query('page', 0, 60) %}
-	{% for page in pages.contents if page.template != meta.template %}
+  {% set pages = query('page', 0, 60).contents %}
+	{% for page in pages if page.template != meta.template %}
 	<!-- Section -->
 	<article id="{{page.slug}}" class="content-block">
 		<!-- Section Block -->
