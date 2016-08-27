@@ -45,10 +45,5 @@
 
 	"options":{
 		"sortby":"date",
-		"excerpt_length":162,
-		"excerpt_ellipsis":"&hellip;",
-		"date_format": "%B %d, %Y",
-		"perpage":12,
-    "markdown":false
   }
 }

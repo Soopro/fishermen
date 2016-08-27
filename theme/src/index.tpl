@@ -82,9 +82,11 @@
           <div class="form-group row">
             <div class="col-sm-8">
               <!-- email -->
-              <input id="email" type="email" name="email"
-               placeholder="{{_('Email Address here')}}"
-               class="form-control email">
+              <input id="email"
+                     type="email"
+                     name="email"
+                     placeholder="{{_('Email Address here')}}"
+                     class="form-control email">
                <!-- #email -->
             </div>
             <div class="col-sm-4">

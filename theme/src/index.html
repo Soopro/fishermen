@@ -74,14 +74,13 @@
     </div>
   </section>
 	<!-- #Main -->
-	{% for page in pages| type('page') if not page.is_front %}
+  {% set pages = query('page', 0, 60) %}
+	{% for page in pages.contents if page.template != meta.template %}
 	<!-- Section -->
 	<article id="{{page.slug}}" class="content-block">
-		{% if page.template != 'index' and page.template %}
-			<!-- Section Block -->
-			{% include page.template+".html" ignore missing %}
-			<!-- #Section Block -->
-		{% endif %}
+		<!-- Section Block -->
+		{% include page.template+".html" ignore missing %}
+		<!-- #Section Block -->
 	</article>
 	<!-- #Section -->
 	{% endfor %}
