@@ -1,5 +1,5 @@
 {
-	"version":"1.3.3",
+	"version":"1.4.0",
   "slug":"fishermen",
 	"title":"Fishermen",
   "author":"Redy Ru",
@@ -44,6 +44,6 @@
   },
 
 	"options":{
-		"sortby":"date",
+		"sortby":"date"
   }
 }
