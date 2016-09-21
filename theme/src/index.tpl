@@ -63,18 +63,18 @@
            sup-widget-option
            ng-model="meta.mailto"
 
-           structure="{
-             'email':{'label': _('Email')},
+           structure="[
+             {'key': 'email', 'label': _('Email')},
 
-             'subject':{'label': _('Subject'),
-                        'default': _('Subject text here.')},
+             {'key': 'subject', 'label': _('Subject'),
+              'default': _('Subject text here.')},
 
-             'message':{'label': _('Message'),
-                        'default': _('Message text here.')},
+             {'key': 'message', 'label': _('Message'),
+              'default': _('Message text here.')},
 
-             'btntext':{'label':_('Button Text'),
-                        'default': _('Get Link')},
-           }">
+             {'key': 'btntext', 'label':_('Button Text'),
+              'default': _('Get Link')},
+           ]">
 
         <form action="{{meta.mailto.email}}">
           <input type="hidden" name="subject" value="{{meta.mailto.subject}}">
