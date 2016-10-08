@@ -9,10 +9,10 @@
 <!-- Content Block -->
 <article id="{{meta.slug}}"
          class="content-block">
-  <div class="page {{meta.background.class}}"
+  <div class="page {{meta.bg.class}}"
        sup-widget-bg
-       ng-model="meta.background"
-       style="{{meta.background.style}}">
+       ng-model="meta.bg"
+       style="{{meta.bg.style}}">
     <section class="container">
 			<div sup-widget-series
            default="{{g.default_series}}"

@@ -7,14 +7,16 @@
 
 <div class="editor-gap-top"></div>
 <!-- Content Block -->
-<article id="{{meta.slug}}" class="content-block">
-  <div class="feature {{meta.background.class}}"
-   sup-widget-bg ng-model="meta.background"
-   style="{{meta.background.style}}">
+<article id="{{meta.slug}}"
+         class="content-block">
+  <div class="page {{meta.bg.class}}"
+       sup-widget-bg
+       ng-model="meta.bg"
+       style="{{meta.bg.style}}">
     <section class="container">
       <div class="row">
         <div class="col-md-12">
-          <header class="center">
+          <header class="text-center">
             <h2 sup-widget-text ng-model="meta.title"
              default="{{_('Title')}}"></h2>
           </header>

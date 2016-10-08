@@ -401,33 +401,32 @@ iframe {
 .content-block {
   position: relative;
   margin: 0 auto;
+  padding: 45px 0;
   background: #fff;
-}
-.content-block .page {
-  min-height: 300px;
   border-bottom: 1px solid #ccc;
 }
+.content-block .page {
+  min-height: 400px;
+}
 
-.content-block .page header{
-  margin-top: 40px;
+.content-block .page header {
+  margin-top: 15px;
 }
-.content-block header.center{
-  text-align: center;
-}
+
 .content-block .imgbox {
   text-align: center;
   overflow: hidden;
 }
-.content-block .imgbox img{
-  max-width: 99%;
+.content-block .imgbox img {
+  max-width: 100%;
   height: auto;
-  margin: 40px auto;
+  margin: 0 auto;
 }
-.content-block .imgbox img.tie{
+.content-block .imgbox img.tie {
   margin-top: 0;
   margin-bottom: 0;
 }
-.content-block .pointbox{
+.content-block .pointbox {
 	text-align: center;
   margin-top:50px;
   margin-bottom:50px;

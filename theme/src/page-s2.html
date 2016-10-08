@@ -1,6 +1,6 @@
 {% if g and page %}
-<div class="feature {{page.background.class}}" 
- style="{{page.background.style}}">
+<div class="page {{page.bg.class}}"
+ style="{{page.bg.style}}">
   <section class="container">
     <div class="row">
       <div class="col-md-6 pull-left textbox">
@@ -12,7 +12,7 @@
         </div>
       </div>
       <div class="col-md-6 pull-right imgbox">
-        <img src="{{page.featured_img.src or g.default_featured_img}}" 
+        <img src="{{page.featured_img.src or g.default_featured_img}}"
          alt="{{page.title}}" class="{{page.featured_img.class}}"/>
       </div>
     </div>

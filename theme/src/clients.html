@@ -1,28 +1,28 @@
 {% if g and page %}
-<div class="feature {{page.background.class}}"
- style="{{page.background.style}}">
+<div class="page {{page.bg.class}}"
+ style="{{page.bg.style}}">
     <section class="container">
       <div class="row">
-        {% for media in page.gallery %}
+        <div class="col-md-12">
+          <header class="text-center">
+            <h2>{{page.title}}</h2>
+          </header>
+        </div>
+      </div>
+      <div class="row">
+        {% for item in page.series if item.src %}
         <div class="col-sm-4 pointbox">
-          {% if media.title %}
-          <h3>{{media.title}}</h3>
-          {% endif %}
-          {% if media.caption %}
-          <div class="caption">
-            <p>{{media.caption}}</p>
-          </div>
-          {% endif %}
-          {% if media.src %}
-            {% if media.link %}
-            <a href="{{media.link | url}}" target="{{media.target}}">
-              <img class="{{media.class}}" src="{{media.src}}"
+          {% if media.link %}
+          <a href="{{media.link | url}}"
+             target="{{media.target}}">
+            <img class="{{media.class}}"
+                 src="{{media.src}}"
+                 alt="{{media.title or 'media'}}" />
+          </a>
+          {% else %}
+          <img class="{{media.class}}"
+               src="{{media.src}}"
                alt="{{media.title or 'media'}}" />
-            </a>
-            {% else %}
-            <img class="{{media.class}}" src="{{media.src}}"
-             alt="{{media.title or 'media'}}" />
-            {% endif %}
           {% endif %}
         </div>
         {% endfor %}

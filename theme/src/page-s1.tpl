@@ -8,9 +8,9 @@
 <div class="editor-gap-top"></div>
 <!-- Content Block -->
 <article id="{{meta.slug}}" class="content-block">
-  <div class="feature {{meta.background.class}}"
-   sup-widget-bg ng-model="meta.background"
-   style="{{meta.background.style}}">
+  <div class="page {{meta.bg.class}}"
+   sup-widget-bg ng-model="meta.bg"
+   style="{{meta.bg.style}}">
     <section class="container">
       <div class="row">
         <div class="col-md-6 pull-right textbox">
