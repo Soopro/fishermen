@@ -1,15 +1,9 @@
-<sup-set ng-model="g.default_featured_img"
-         value="{{theme_url+'/styles/default_featured_img.png'}}"></sup-set>
+{% import 'g.tpl' %}
+{% include '_css.tpl' %}
 
-<!-- Webfonts -->
-<link ng-href='{{theme_url}}/styles/fonts/lato.css'
- rel='stylesheet' type='text/css'>
-<!-- Bootstrap core CSS -->
-<link ng-href="{{theme_url}}/libs/bootstrap/bootstrap.min.css"
- rel='stylesheet' type='text/css'>
-<!-- Styles-->
-<link ng-href="{{theme_url}}/styles/style.css" 
- rel='stylesheet' type='text/css'>
+<!-- Header -->
+{% include '_header.tpl' %}
+<!-- #Header -->
 
 <div class="editor-gap-top"></div>
 <!-- Content Block -->

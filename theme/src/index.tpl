@@ -6,40 +6,13 @@
      sup-widget-bg
      ng-model="meta.hero">
   <!-- Header -->
-  <header id="masthead">
-    <nav class="container nav-primary">
-      <div class="navbar">
-        <div class="navbar-header">
-         <button type="button" class="navbar-toggle">
-           <span class="icon-bar"></span>
-           <span class="icon-bar"></span>
-           <span class="icon-bar"></span>
-         </button>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li ng-repeat="nav in menu.primary">
-              <a href="#" class="parallax-link {{nav.meta.class}}">
-                {{nav.title}}
-              </a>
-            </li>
-            <li ng-if="translates">
-              <a href="#" class="language">
-                <span class="language-switcher-text">
-                  {{_('Languages')}}
-                </span>&nbsp;<span class="caret"></span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </header>
+  {% include '_header.tpl' %}
   <!-- #Header -->
   <!-- Main -->
-  <section id="main">
+  <section id="{{meta.slug}}"
+           class="main-section">
     <div class="container">
-      <div id="brand">
+      <div class="brand">
         <div class="logo">
           <div sup-ico-pos="out top"
                sup-widget-media
@@ -59,31 +32,27 @@
                 default="{{_('Subtitle text here')}}"></span>
         </h2>
       </div>
-      <div id="get-link"
+      <div class="get-link"
            sup-widget-option
            ng-model="meta.mailto"
 
            structure="[
-             {'key': 'email', 'label': _('Email')},
+             {'key': 'action', 'label': _('Action'),
+              'default': _('mailto:your@email.here')},
 
              {'key': 'subject', 'label': _('Subject'),
-              'default': _('Subject text here.')},
-
-             {'key': 'message', 'label': _('Message'),
-              'default': _('Message text here.')},
+              'default': _('Subject here.')},
 
              {'key': 'btntext', 'label':_('Button Text'),
               'default': _('Get Link')},
            ]">
 
-        <form action="{{meta.mailto.email}}">
+        <form action="{{meta.mailto.aciton}}">
           <input type="hidden" name="subject" value="{{meta.mailto.subject}}">
-          <input type="hidden" name="message" value="{{meta.mailto.message}}">
           <div class="form-group row">
             <div class="col-sm-8">
               <!-- email -->
-              <input id="email"
-                     type="email"
+              <input type="email"
                      name="email"
                      placeholder="{{_('Email Address here')}}"
                      class="form-control email">
@@ -99,14 +68,14 @@
       </div>
 
       <div>
-        <div id="excerpt">
+        <div class="excerpt">
           <p>
             <span sup-widget-text
                   ng-model="meta.description"
                   default="{{_('Description text here')}}"></span>
           </p>
         </div>
-        <div id="store">
+        <div class="store">
           <div class="row">
             <div class="col-sm-4">
               <a class="flag"
@@ -137,10 +106,10 @@
             </div>
           </div>
         </div>
-        <div id="gofeatures">
+        <div class="learn-more">
           <a href="#"
-             class="btn-gofeatures">
-            {{_('Features')}}
+             class="btn-more">
+            {{_('Learn More')}}
           </a>
         </div>
   		</div>

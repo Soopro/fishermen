@@ -1,49 +1,28 @@
 {
-	"version":"1.4.1",
+	"version":"1.4.2.rc1",
   "slug":"fishermen",
 	"title":"Fishermen",
   "author":"Redy Ru",
   "capabilities":["ws"],
+  "icon":"icon.png",
   "poster":"poster.jpg",
-	"thumbnail":"thumbnail.png",
 	"previews":["previews.jpg"],
 	"description": {
     "en":"A simple website for your mobile app.",
     "zh":"这是一个简单的移动应用网站，用来展示您的移动应用软件。"
   },
 
-  "templates":{
-    "index":{
-      "en":"Homepage",
-      "zh":"首页"
-    },
-    "page":{
-      "en":"Static Page",
-      "zh":"静态页"
-    },
-    "feature_left":{
-      "en":"Feature #1",
-      "zh":"特性页面 #1"
-    },
-    "feature_right":{
-      "en":"Feature #2",
-      "zh":"特性页面 #2"
-    },
-    "feature_center":{
-      "en":"Feature #3",
-      "zh":"特性页面 #3"
-    },
-    "free_feature":{
-      "en":"Feature Free",
-      "zh":"自由特性页"
-    },
-    "gallery_feature":{
-      "en":"Feature Gallery",
-      "zh":"图册特性页"
-    }
-  },
+  "templates":[
+    "index",
+    "^page",
+    "^feature",
+    "^feature-s1",
+    "^feature-s2",
+    "^service",
+    "^portfolio"
+  ],
 
 	"options":{
-		"sortby":"date"
+		"sortby": "date"
   }
 }

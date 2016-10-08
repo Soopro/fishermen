@@ -9,9 +9,10 @@
 	{% include "_header.html" %}
 	<!-- #Header -->
 	<!-- Main -->
-	<section id="main">
+	<section id="{{meta.slug}}"
+           class="main-section">
     <div class="container">
-      <div id="brand">
+      <div class="brand">
         <div class="logo">
           <img src="{{site_meta.logo or g.default_logo}}"
            alt="{{site_meta.title}}" />
@@ -19,17 +20,20 @@
         <h1>{{meta.title}}</h1>
   	    <h2>{{meta.subtitle}}</h2>
       </div>
-      {% if meta.mailto.email %}
-      <div id="get-link">
-        <form action="{{meta.mailto.email}}">
-          <input type="hidden" name="subject" value="{{meta.mailto.subject}}">
-          <input type="hidden" name="message" value="{{meta.mailto.message}}">
+      {% if meta.mailto.action %}
+      <div class="get-link">
+        <form action="{{meta.mailto.action}}">
+          <input type="hidden"
+                 name="subject"
+                 value="{{meta.mailto.subject}}">
           <div class="form-group row">
             <div class="col-sm-8">
               <!-- email -->
-              <input id="email" type="email" name="email"
-               placeholder="{{_('Email Address here')}}"
-               class="form-control email">
+              <input id="email"
+                     type="email"
+                     name="email"
+                     placeholder="{{_('Email Address here')}}"
+                     class="form-control email">
                <!-- #email -->
             </div>
             <div class="col-sm-4">
@@ -41,10 +45,10 @@
         </form>
       </div>
       {% endif %}
-      <div id="excerpt">
+      <div class="excerpt">
         <p>{{meta.description}}</p>
       </div>
-      <div id="store">
+      <div class="store">
         <div class="row">
           <div class="col-sm-4">
             <a href="{{meta.app_android.link | url}}"
@@ -66,9 +70,9 @@
           </div>
         </div>
       </div>
-      <div id="gofeatures">
-        <a href="#" class="btn-gofeatures parallax-link parallax-go-first">
-          {{_('Features')}}
+      <div class="learn-more">
+        <a href="#" class="btn-more parallax-link parallax-go-first">
+          {{_('Learn More')}}
         </a>
       </div>
     </div>

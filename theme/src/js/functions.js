@@ -33,10 +33,10 @@ $(document).ready(function () {
     var target_top=0;
     var current_hash='';
     var loc_path = location.pathname.replace(/^\//,'');
-    if (loc_path == this.pathname.replace(/^\//,'') 
+    if (loc_path == this.pathname.replace(/^\//,'')
     && location.hostname == this.hostname) {
       var target;
-      
+
       var _go_first = $(this).hasClass('parallax-go-first');
       if(this.hash){
         current_hash = this.hash;
@@ -49,8 +49,9 @@ $(document).ready(function () {
         current_hash = '#'+target.id;
       }
       if (current_hash) {
+        top_offset = $('.masthead').height();
         target = target ? $(target) : $(current_hash);
-        target_top = target.offset().top;
+        target_top = target.offset().top - top_offset;
       }
     }
     $('html, body').animate({
@@ -60,7 +61,7 @@ $(document).ready(function () {
         hash_path = current_hash.slice(1);
       }else{
         hash_path = current_hash;
-      }  
+      }
       window.location.hash = '/'+hash_path;
       // for stupid IE, if no slash the window might brink some how.
     });
@@ -68,25 +69,25 @@ $(document).ready(function () {
     e.preventDefault();
     return false;
   });
-  
+
   //Resize
   resizeHandler(true);
   $(window).resize( function(){
     resizeHandler();
   });
-    
+
   function resizeHandler(force){
-    if ($('#main').length >0){
+    if ($('.main-section').length >0){
       var win_height=$(window).height();
-      var offset=$('#main').data('offset');
+      var offset=$('.main-section').data('offset');
       if(!offset){
         offset=0;
       }
 
-      var obj_height=$('#main').data('height');
+      var obj_height=$('.main-section').data('height');
       if (!obj_height){
-        obj_height=$('#main').height();
-        $('#main').data('height', obj_height);
+        obj_height=$('.main-section').height();
+        $('.main-section').data('height', obj_height);
       }
 
       var new_height=win_height-offset;
@@ -95,9 +96,9 @@ $(document).ready(function () {
       }
 
       if (force){
-        $('#main').height(new_height);
+        $('.main-section').height(new_height);
       }else{
-        $('#main').stop().animate({
+        $('.main-section').stop().animate({
           height:new_height
         },600);
       }

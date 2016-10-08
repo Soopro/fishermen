@@ -2,8 +2,8 @@
   {"Language":"zh"},
 
   {
-    "msgid": "More",
-    "msgstr": "更多"
+    "msgid": "Learn More",
+    "msgstr": "了解更多"
   },
   {
     "msgid": "Languages",
@@ -26,11 +26,7 @@
     "msgstr": "获取链接"
   },
   {
-    "msgid": "Message text here.",
-    "msgstr": "在这里写消息文本。"
-  },
-  {
-    "msgid": "Subject text here.",
+    "msgid": "Subject here.",
     "msgstr": "在这里写题目文本。"
   },
   {
@@ -50,19 +46,23 @@
     "msgstr": "栏目标题"
   },
   {
+    "msgid": "Item Title",
+    "msgstr": "子标题"
+  },
+  {
+    "msgid": "Click here to edit series item.",
+    "msgstr": "点击这里编辑这一条序列条目。"
+  },
+  {
+    "msgid": "Add New Item",
+    "msgstr": "添加新条目"
+  },
+  {
+    "msgid": "Click here to add a series item.",
+    "msgstr": "点击这里添加一个新的序列条目。"
+  },
+  {
     "msgid": "$_CONTENT",
     "msgstr": "<p>这一段是默认的富文本内容，你可以按照自己的需要重新填写。进入富文本编辑状态以后，将出现一个输入工具条（它通常会在画面顶部或是富文本区域的上方），使用工具条可以插入、更换或者删除图片和链接。</p>"
-  },
-  {
-    "msgid": "$_COL_CONTENT",
-    "msgstr": "这是一端分列的富文本内容，您可以简单修改这部分的文字内容。如果您需要修改这部分的排版，那么请通过编辑器工具条上的编辑源码编辑功能进行全面的修改。"
-  },
-  {
-    "msgid": "$_CAPTION",
-    "msgstr": "这是图片的说明文字。它通常是一到两句话。您可以在编辑图册的时候编写它。"
-  },
-  {
-    "msgid": "$_ERROR404",
-    "msgstr": "没办法找到你要打开的页面，你大概搞错了页面网址，或者是我们的系统挂了。总之，你只能点击下面的按钮返回。"
   }
 ]

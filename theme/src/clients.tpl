@@ -1,7 +1,5 @@
-<sup-set ng-model="g.default_featured_img"
-         value="{{theme_url+'/styles/default_featured_img.png'}}"></sup-set>
-<sup-set ng-model="g.default_thumbnail"
-         value="{{theme_url+'/styles/default_thumbnail.png'}}"></sup-set>
+{% import 'g.tpl' %}
+{% include '_css.tpl' %}
 
 <!-- Webfonts -->
 <link ng-href='{{theme_url}}/styles/fonts/lato.css'
