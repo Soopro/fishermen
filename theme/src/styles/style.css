@@ -19,7 +19,7 @@ Version: 1.0
   font-size: 14pt;
   color: #eee;
 }
-.caret{
+.caret {
   color: #859e52;
 }
 .input-group .input-group-btn .dropdown-toggle{
@@ -29,8 +29,10 @@ Version: 1.0
 .form-control:focus {
   border-color: #66afe9;
   outline: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(204, 255, 102, 0.6);
-  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(204, 255, 102, 0.6);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),
+                      0 0 8px rgba(204, 255, 102, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075),
+              0 0 8px rgba(204, 255, 102, 0.6);
 }
 .dropdown-menu{
   color: #eee;
@@ -73,6 +75,7 @@ Version: 1.0
 	color:#fff;
 	display:none;
 }
+
 /* BASE: =Base
 ----------------------------------------------- */
 html, body {
@@ -92,24 +95,22 @@ body, div, a, ul li, button, h1,h2,h3,h4,h5, p {
 	background-size: cover;
 }
 h1 {
-  font-size: 60pt;
-  margin-bottom: 50px;
+  font-size: 50pt;
+  margin-bottom: 30px;
 }
 h2 {
-  font-size: 50pt;
-  margin-bottom: 40px;
+  font-size: 40pt;
+  margin-top: 0;
+  margin-bottom: 30px;
 }
 h3 {
   font-size: 20pt;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
-p, ul li{
+p, li {
   font-size: 12pt;
-  line-height: 1.5em;
-	padding-bottom: 10px;
-}
-p {
-  padding-bottom: 20px;
+  line-height: 1.4em;
+	margin-bottom: 15px;
 }
 
 a, a:link, a:visited {
@@ -223,6 +224,7 @@ iframe {
   color: #fff;
   text-align: center;
   font-size: 1em;
+  padding: 5px !important;
 }
 
 .masthead .dropdown-toggle {
@@ -271,6 +273,7 @@ iframe {
 /* MODULE: =Brand
 ----------------------------------------------- */
 .brand {
+  margin-top: 15px;
   margin-bottom: 40px;
 }
 .brand .logo {
@@ -401,16 +404,16 @@ iframe {
 .content-block {
   position: relative;
   margin: 0 auto;
-  padding: 45px 0;
   background: #fff;
   border-bottom: 1px solid #ccc;
 }
-.content-block .page {
-  min-height: 400px;
-}
 
-.content-block .page header {
-  margin-top: 15px;
+.content-block .page {
+  min-height: 300px;
+  padding: 45px 0;
+}
+.content-block .page.bottom-less {
+  padding-bottom: 0;
 }
 
 .content-block .imgbox {
@@ -426,20 +429,18 @@ iframe {
   margin-top: 0;
   margin-bottom: 0;
 }
-.content-block .pointbox {
+.content-block .item {
 	text-align: center;
-  margin-top:50px;
-  margin-bottom:50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
-.content-block .pointbox img{
-	max-width: 99%;
-  height: auto;
-  margin: 0 auto;
+.content-block .textbox {
+  padding-bottom: 30px;
 }
 
-.content-block .textbox{
-  padding-bottom: 40px;
+.content-block .textbox.aside {
+  padding-top: 30px;
 }
 
 .content-block .textbox p{
@@ -454,29 +455,32 @@ iframe {
 }
 
 .content-block .caption {
-  padding: 0 16px;
+  padding: 0 8px;
+  height: 70px;
+  margin-bottom: 30px;
 }
 
 /* GRID: =Footer
 ----------------------------------------------- */
-#footer{
+.footer {
   position: relative;
   margin: 0 auto 0 auto;
-  background: #fff;
+  background: #859e52;
 }
-#footer .container{
-  padding: 60px;
+.footer .container {
+  padding: 30px;
 }
-#footer a:hover{
+.footer a:hover {
 	text-decoration: none;
 }
-#footer .copyright{
+.footer .copyright {
   margin: 0 auto;
-  max-width:400px;
+  max-width: 400px;
   text-align: center;
   font-size: 9pt;
+  color: #fff;
 }
-#footer .copyright span{
+.footer .copyright span {
   display: block;
 }
 
@@ -494,18 +498,9 @@ iframe {
 -----------------------------------------------
 Lastly, apply responsive CSS fixes as necessary
 ----------------------------------------------- */
-@media screen{
-}
 @media screen and (max-width:991px){
 	.pull-left{float:none!important;}
 	.pull-right{float:none!important;}
-	#features h2{
-		text-align:center;
-	}
-	#features .textbox{
-		text-align:center;
-	  padding-top: 40px;
-	}
 }
 @media screen and (max-width:767px){
 	.navbar-brand{
@@ -547,10 +542,7 @@ Lastly, apply responsive CSS fixes as necessary
     padding: 0;
     font-size: 0.8em;
   }
-	#features h2{
-		font-size:40pt;
-	}
-	.shareto{
+	.shareto {
 		display:none;
 	}
   h1{

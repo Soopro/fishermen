@@ -6,6 +6,10 @@
 <link ng-href="{{theme_url}}/libs/bootstrap/bootstrap.min.css?{{g.ver}}"
       rel='stylesheet'>
 
+<!-- common -->
+<link ng-href="{{libs_url}}/styles/common.css?{{g.ver}}"
+      rel="stylesheet">
+
 <!-- styles-->
 <link ng-href="{{theme_url}}/styles/style.css?{{g.ver}}"
       rel='stylesheet'>

@@ -1,8 +1,22 @@
 {% if g and page %}
-<div class="page {{page.bg.class}}"
+<div class="page {{page.bg.preset}} {{page.bg.class}}"
      style="{{page.bg.style}}">
     <section class="container">
-      {{page.content}}
+      <div class="row">
+        {% for item in page.series %}
+        <div class="col-md-3 text-center feature">
+          <figure>
+            <img src="{{g.img_holder}}"
+                 class="img-holder"
+                 style="{{item.src|bg_img(g.default_thumbnail)}}">
+          </figure>
+          <h3 class="text-nowrap">{{item.title}}</h3>
+          <p class="text-clamp-3 caption">
+            {{item.caption}}
+          </p>
+        </div>
+        {% endfor %}
+      </div>
     </section>
 </div>
 {% else %}

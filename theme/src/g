@@ -3,6 +3,7 @@
 {% set default_thumbnail = theme_url+'/styles/default_thumbnail.png' %}
 {% set default_feature_img = theme_url+'/styles/default_feature_img.png' %}
 
+{% set img_holder = libs_url+"/styles/trans.png" %}
 
 {% set opts = theme_meta.options %}
 {% set ver = theme_meta.version %}

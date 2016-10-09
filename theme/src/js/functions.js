@@ -12,24 +12,18 @@ if (!window.console) {
 	window["console"] = {log: function(){}};
 }
 
-var language_texts = {
-  "en":"Languages",
-  "zh":"语言",
-}
-
 $(document).ready(function () {
-	//Language Switcher
-	$('.language-switcher-text')
-  .each(function() {
-		var lang = userLocale.split('_')[0] || 'en';
-    for(var key in language_texts){
-      if(key == lang){
-        $(this).html(language_texts[key]);
-      }
-    }
-	});
+
+  top_offset = $('.masthead').height();
+  // get top offset. also will update when resized.
+
+  $('.navbar-collapse').collapse({toggle: false});
+  // init collapse. otherwise will init when .collapse, event it is 'hide';
+
+
   //Parallax
   $('.parallax-link[href*=#]').click(function(e) {
+    $('.navbar-collapse').collapse('hide');
     var target_top=0;
     var current_hash='';
     var loc_path = location.pathname.replace(/^\//,'');
@@ -49,7 +43,7 @@ $(document).ready(function () {
         current_hash = '#'+target.id;
       }
       if (current_hash) {
-        top_offset = $('.masthead').height();
+        console.log(top_offset);
         target = target ? $(target) : $(current_hash);
         target_top = target.offset().top - top_offset;
       }
@@ -65,7 +59,7 @@ $(document).ready(function () {
       window.location.hash = '/'+hash_path;
       // for stupid IE, if no slash the window might brink some how.
     });
-    $('.navbar-collapse').collapse('hide');
+
     e.preventDefault();
     return false;
   });
@@ -77,6 +71,8 @@ $(document).ready(function () {
   });
 
   function resizeHandler(force){
+    top_offset = $('.masthead').height();  // get top offset after resize.
+
     if ($('.main-section').length >0){
       var win_height=$(window).height();
       var offset=$('.main-section').data('offset');

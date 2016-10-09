@@ -29,7 +29,12 @@
            </a>
            <ul class="dropdown-menu language-menu" role="menu">
   				 {% for trans in translates %}
-             <li><a href="{{trans.url}}">{{trans.name}}</a></li>
+             <li>
+               <a href="{{trans.url}}"
+                  class="{{'active' if trans.active}}">
+                 {{trans.name}}
+               </a>
+             </li>
   				 {% endfor %}
            </ul>
          </li>

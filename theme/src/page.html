@@ -1,15 +1,15 @@
 {% if g and page %}
-<div class="page {{page.bg.class}}"
- style="{{page.bg.style}}">
+<div class="page {{page.bg.preset}} {{page.bg.class}}"
+     style="{{page.bg.style}}">
   <section class="container">
     <div class="row">
       {% if page.featured_img %}
       <div class="col-md-12 imgbox">
         <img src="{{page.featured_img.src or g.default_featured_img}}"
-         alt="{{page.title}}" />
+             alt="{{page.title}}" />
       </div>
       {% endif %}
-      <div class="col-md-12 textbox">
+      <div class="col-md-8 col-md-offset-2 textbox">
         <header class="text-center">
           <h2>{{page.title}}</h2>
         </header>
