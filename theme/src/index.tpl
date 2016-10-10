@@ -14,8 +14,7 @@
     <div class="container">
       <div class="brand">
         <div class="logo">
-          <div sup-ico-pos="out top"
-               sup-widget-media
+          <div sup-widget-media
                ng-model="meta.logo">
             <img ng-src="{{meta.logo.src || site_meta.logo || g.default_logo}}"
                  alt="{{site_meta.title}}" />
@@ -76,32 +75,25 @@
           </p>
         </div>
         <div class="store">
-          <div class="row">
-            <div class="col-sm-4">
-              <a class="flag"
-                 ng-class="{'fade': !meta.app_android.link}"
-                 href="#"
-                 sup-widget-button
-                 ng-model="meta.app_android">
-                <span class="android"></span>
+          <div class="row"
+               sup-widget-series
+               default="{{g.default_products}}"
+               limit="3"
+               ng-init="col_num = 12 / meta.products.length - 1"
+               ng-model="meta.products">
+            <div class="col-sm-{{col_num}}"
+                 sup-widget-series-item
+                 ng-repeat="prd in (meta.products|limitTo(3))">
+              <a class="flag {{prd.class}}"
+                 href="{{prd.link|url}}">
+                <img ng-src="{{prd.src|thumbnail}}"></span>
               </a>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-{{col_num}}">
               <a class="flag"
-                 ng-class="{'fade': !meta.app_ios.link}"
                  href="#"
-                 sup-widget-button
-                 ng-model="meta.app_ios">
-                <span class="apple"></span>
-              </a>
-            </div>
-            <div class="col-sm-4">
-              <a class="flag"
-                 ng-class="{'fade': !meta.app_wp.link}"
-                 href="#"
-                 sup-widget-button
-                 ng-model="meta.app_wp">
-                <span class="wphone"></span>
+                 sup-widget-series-item="new">
+                <img ng-src="{{g.additem}}"></span>
               </a>
             </div>
           </div>
@@ -116,4 +108,5 @@
     </div>
   </section>
   <!-- #Main -->
+  <section>
 </div>

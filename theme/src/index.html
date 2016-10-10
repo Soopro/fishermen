@@ -14,7 +14,7 @@
     <div class="container">
       <div class="brand">
         <div class="logo">
-          <img src="{{site_meta.logo or g.default_logo}}"
+          <img src="{{meta.logo or site_meta.logo or g.default_logo}}"
                alt="{{site_meta.title}}" />
         </div>
         <h1>{{meta.title}}</h1>
@@ -50,22 +50,11 @@
       </div>
       <div class="store">
         <div class="row">
+          {% for prd in meta.products[:3] %}
           <div class="col-sm-4">
-            <a href="{{meta.app_android.link | url}}"
-               class="flag {{'fade' if not meta.app_android.link}}">
-              <span class="android"></span>
-            </a>
-          </div>
-          <div class="col-sm-4">
-            <a href="{{meta.app_ios.link | url}}"
-               class="flag {{'fade' if not meta.app_ios.link}}">
-              <span class="apple"></span>
-            </a>
-          </div>
-          <div class="col-sm-4">
-            <a href="{{meta.app_wp.link | url}}"
-               class="flag {{'fade' if not meta.app_wp.link}}">
-              <span class="wphone"></span>
+            <a href="{{prd.link | url}}"
+               class="flag {{prd.class}}">
+              <img ng-src="{{prd.src|thumbnail}}"></span>
             </a>
           </div>
         </div>
@@ -81,11 +70,11 @@
   {% set pages = query('page', 0, 24, with_content=True).contents %}
 	{% for page in pages if page.template != meta.template %}
 	<!-- Section -->
-	<article id="{{page.slug}}" class="content-block">
+	<section id="{{page.slug}}" class="content-block">
 		<!-- Section Block -->
 		{% include page.template+".html" ignore missing %}
 		<!-- #Section Block -->
-	</article>
+	</section>
 	<!-- #Section -->
 	{% endfor %}
 	<!-- Footer -->

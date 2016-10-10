@@ -9,42 +9,42 @@
 <!-- Content Block -->
 <article id="{{meta.slug}}"
          class="content-block">
-  <div class="page {{meta.bg.class}}"
+  <div class="page {{meta.bg.preset}} {{meta.bg.class}}"
        sup-widget-bg
        ng-model="meta.bg"
        style="{{meta.bg.style}}">
     <section class="container">
-			<div sup-widget-series
-           default="{{g.default_series}}"
-           limit="3"
+			<div class="row"
+           sup-widget-series
+           default="{{g.default_features}}"
+           limit="4"
            ng-model="meta.series">
-        <div class="row">
 
-          <div class="col-sm-4 pointbox"
-               sup-widget-series-item
-               ng-repeat="item in meta.series">
-            <figure>
-              <img ng-src="{{item.type == 'image' ? item.src :
-                             g.default_thumbnail}}">
-            </figure>
-            <h3>{{_('Item Title')}}</h3>
-            <div>
-              <p>{{_('Click here to edit series item.')}}</p>
-            </div>
+        <div class="col-sm-4"
+             sup-widget-series-item
+             ng-repeat="item in meta.series">
+          <figure>
+            <img src="{{g.img_holder}}"
+                 class="img-holder"
+                 style="{{item.src|bg_img(g.default_thumbnail)}}">
+          </figure>
+          <h3>{{item.title}}</h3>
+          <div>
+            <p>{{item.caption}}</p>
           </div>
-
-          <div class="col-sm-4 pointbox"
-               sup-widget-series-item="new">
-            <figure>
-              <img ng-src="{{g.default_thumbnail}}">
-            </figure>
-            <h3>{{_('Add New Item')}}</h3>
-            <div>
-              <p>{{_('Click here to add a series content.')}}</p>
-            </div>
-          </div>
-
         </div>
+
+        <div class="col-sm-4"
+             sup-widget-series-item="new">
+          <figure>
+            <img ng-src="{{g.default_thumbnail}}">
+          </figure>
+          <h3>{{_('Add New Item')}}</h3>
+          <div>
+            <p>{{_('Click here to add a series content.')}}</p>
+          </div>
+        </div>
+
       </div>
     </section>
   </div>
