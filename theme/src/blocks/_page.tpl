@@ -1,10 +1,9 @@
-{% if g and page %}
 <div class="page {{page.bg.preset}} {{page.bg.class}}"
      style="{{page.bg.style}}">
-  <div class="container">
+  <section class="container">
     <div class="row">
       <div class="col-md-12 imgbox">
-        <img src="{{page.featured_img.src or g.default_featured_img}}"
+        <img ng-src="{{page.featured_img.src || g.default_featured_img}}"
              alt="{{page.featured_img.title}}" />
       </div>
       <div class="col-md-8 col-md-offset-2 textbox">
@@ -16,8 +15,5 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </div>
-{% else %}
-<script>window.location.replace('{{base_url}}/#/{{meta.slug}}');</script>
-{% endif %}

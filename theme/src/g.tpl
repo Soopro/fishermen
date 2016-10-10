@@ -61,12 +61,12 @@
            },
            {
              'title': _('Google Play'),
-             'src': theme_url+'/styles/app_badge_android.png'
+             'src': theme_url+'/styles/app_badge_android.png',
              'link': '#'
            },
            {
              'title': _('Windows Phone'),
-             'src': theme_url+'/styles/app_badge_wp.png'
+             'src': theme_url+'/styles/app_badge_wp.png',
              'link': '#'
            }
          ]"></sup-set>

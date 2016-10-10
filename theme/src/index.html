@@ -3,14 +3,12 @@
 <!DOCTYPE html>
 <html lang="{{lang}}">
 {% include "_head.html" %}
-<body class="cover {{meta.hero.preset}} {{meta.hero.class}}"
-      style="{{meta.hero.style}}">
+<body>
 	<!-- Header -->
 	{% include "_header.html" %}
 	<!-- #Header -->
 	<!-- Main -->
-	<section id="{{meta.slug}}"
-           class="main-section">
+	<section id="{{meta.slug}}" class="main-section">
     <div class="container">
       <div class="brand">
         <div class="logo">
@@ -48,17 +46,22 @@
       <div class="excerpt">
         <p>{{meta.description}}</p>
       </div>
+      {% if meta.products %}
       <div class="store">
         <div class="row">
+          {% set _offset = 'col-sm-offset-2' if (meta.products|length) == 2
+                      else 'col-sm-offset-4' if (meta.products|length) == 1 %}
           {% for prd in meta.products[:3] %}
-          <div class="col-sm-4">
+          <div class="col-sm-4 {{_offset}}">
             <a href="{{prd.link | url}}"
                class="flag {{prd.class}}">
-              <img ng-src="{{prd.src|thumbnail}}"></span>
+              <img src="{{prd.src|thumbnail}}"></span>
             </a>
           </div>
+          {% endfor %}
         </div>
       </div>
+      {% endif %}
       <div class="learn-more">
         <a href="#" class="btn-more parallax-link parallax-go-first">
           {{_('Learn More')}}
@@ -80,5 +83,9 @@
 	<!-- Footer -->
 	{% include "_footer.html" %}
 	<!-- #Footer -->
+
+  <div class="cover {{meta.hero.class}}"
+       style="{{meta.hero.style}}"></div>
+
 </body>
 </html>

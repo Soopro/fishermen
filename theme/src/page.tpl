@@ -7,31 +7,34 @@
 
 <div class="editor-gap-top"></div>
 <!-- Content Block -->
-<article id="{{meta.slug}}" class="content-block">
-  <div class="page {{meta.bg.class}}"
-   sup-widget-bg ng-model="meta.bg"
-   style="{{meta.bg.style}}">
-	  <section class="container">
+<section id="{{meta.slug}}"
+         class="content-block">
+  <div class="page {{meta.bg.preset}} {{meta.bg.class}}"
+       sup-widget-bg
+       ng-model="meta.bg"
+       style="{{meta.bg.style}}">
+    <div class="container">
       <div class="row">
         <div class="col-md-12 imgbox">
-          <div sup-inline-block>
-            <div sup-widget-media ng-model="meta.featured_img">
-              <img ng-src="{{meta.featured_img.src || g.default_featured_img}}"
-               class="{{meta.featured_img.class}}"/>
-            </div>
+          <div sup-widget-media
+               ng-model="meta.featured_img">
+            <img ng-src="{{meta.featured_img.src || g.default_featured_img}}"
+                 class="{{meta.featured_img.class}}"/>
           </div>
         </div>
-        <div class="col-md-12 textbox">
+        <div class="col-md-8 col-md-offset-2 textbox">
           <header class="text-center">
-            <h2 sup-widget-text ng-model="meta.title"
-             default="{{_('Title')}}"></h2>
+            <h2 sup-widget-text
+                ng-model="meta.title"
+                default="{{_('Title')}}"></h2>
           </header>
           <div class="content text-center"
-           sup-angular-wysiwyg ng-model="content"
-           default="{{_('$_CONTENT')}}"></div>
+               sup-angular-wysiwyg
+               ng-model="content"
+               default="{{_('$_CONTENT')}}"></div>
         </div>
       </div>
-	  </section>
+    </div>
   </div>
-</article>
+</section>
 <!-- #Content Block -->

@@ -26,6 +26,18 @@
     "msgstr": "获取链接"
   },
   {
+    "msgid": "Action",
+    "msgstr": "动作"
+  },
+  {
+    "msgid": "Subject",
+    "msgstr": "题目"
+  },
+  {
+    "msgid": "Button Text",
+    "msgstr": "按钮文字"
+  },
+  {
     "msgid": "Subject here.",
     "msgstr": "在这里写题目文本。"
   },

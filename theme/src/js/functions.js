@@ -43,7 +43,6 @@ $(document).ready(function () {
         current_hash = '#'+target.id;
       }
       if (current_hash) {
-        console.log(top_offset);
         target = target ? $(target) : $(current_hash);
         target_top = target.offset().top - top_offset;
       }
@@ -71,14 +70,8 @@ $(document).ready(function () {
   });
 
   function resizeHandler(force){
-    top_offset = $('.masthead').height();  // get top offset after resize.
-
     if ($('.main-section').length >0){
       var win_height=$(window).height();
-      var offset=$('.main-section').data('offset');
-      if(!offset){
-        offset=0;
-      }
 
       var obj_height=$('.main-section').data('height');
       if (!obj_height){
@@ -86,7 +79,7 @@ $(document).ready(function () {
         $('.main-section').data('height', obj_height);
       }
 
-      var new_height=win_height-offset;
+      var new_height=win_height-top_offset;
       if (new_height<obj_height){
         new_height=obj_height;
       }
