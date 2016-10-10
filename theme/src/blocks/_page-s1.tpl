@@ -1,6 +1,7 @@
 <div class="page {{page.bg.preset}} {{page.bg.class}}"
      style="{{page.bg.style}}">
-  <section class="container">
+  <section class="container"
+           sup-widget-open="page">
     <div class="row">
       <div class="col-md-6 pull-right textbox aside">
         <header>

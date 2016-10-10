@@ -35,8 +35,8 @@
          ng-model="meta.mailto"
 
          structure="[
-           {'key': 'action', 'label': _('Action'),
-            'default': _('mailto:your@email.here')},
+           {'key': 'address', 'label': _('Email Address'),
+            'default': 'your@email.here'},
 
            {'key': 'subject', 'label': _('Subject'),
             'default': _('Subject here.')},
@@ -45,7 +45,7 @@
             'default': _('Get Link')},
          ]">
 
-      <form action="{{meta.mailto.aciton}}">
+      <form action="#">
         <input type="hidden" name="subject" value="{{meta.mailto.subject}}">
         <div class="form-group row">
           <div class="col-sm-8">

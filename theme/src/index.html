@@ -18,9 +18,9 @@
         <h1>{{meta.title}}</h1>
   	    <h2>{{meta.subtitle}}</h2>
       </div>
-      {% if meta.mailto.action %}
+      {% if meta.mailto.address %}
       <div class="get-link">
-        <form action="{{meta.mailto.action}}">
+        <form action="mailto:{{meta.mailto.address}}">
           <input type="hidden"
                  name="subject"
                  value="{{meta.mailto.subject}}">
