@@ -14,7 +14,17 @@ if (!window.console) {
 
 $(document).ready(function () {
 
-  top_offset = $('.masthead').height();
+  var top_offset = function(update){
+    if (typeof this._offset !== 'number'){
+      this._offset = 0;
+    }
+    if (update){
+      // updated top offset
+      this._offset = $('.masthead').height();
+    }
+    return this._offset;
+  }
+
   // get top offset. also will update when resized.
 
   $('.navbar-collapse').collapse({toggle: false});
@@ -27,8 +37,9 @@ $(document).ready(function () {
     var target_top=0;
     var current_hash='';
     var loc_path = location.pathname.replace(/^\//,'');
-    if (loc_path == this.pathname.replace(/^\//,'')
-    && location.hostname == this.hostname) {
+    var loc_path_matched = loc_path == this.pathname.replace(/^\//,'');
+    var hostname_matched = location.hostname == this.hostname;
+    if (loc_path_matched && hostname_matched) {
       var target;
 
       var _go_first = $(this).hasClass('parallax-go-first');
@@ -44,7 +55,7 @@ $(document).ready(function () {
       }
       if (current_hash) {
         target = target ? $(target) : $(current_hash);
-        target_top = target.offset().top - top_offset;
+        target_top = target.offset().top - top_offset();
       }
     }
     $('html, body').animate({
@@ -63,35 +74,32 @@ $(document).ready(function () {
     return false;
   });
 
-  //Resize
-  resizeHandler(true);
-  $(window).resize( function(){
-    resizeHandler();
-  });
+  var default_top_padding = parseInt($('.main-section').css('padding-top'));
 
-  function resizeHandler(force){
-    if ($('.main-section').length >0){
-      var win_height=$(window).height();
+  function resizeHandler(){
+    top_offset(true);
 
-      var obj_height=$('.main-section').data('height');
-      if (!obj_height){
-        obj_height=$('.main-section').height();
-        $('.main-section').data('height', obj_height);
-      }
+    if ($('.main-section').length > 0){
+      var win_height = $(window).height();
+      var obj_height = $('.main-section > div').height() + top_offset();
+      var new_height = (win_height < obj_height) ? obj_height : win_height;
 
-      var new_height=win_height-top_offset;
-      if (new_height<obj_height){
-        new_height=obj_height;
-      }
+      $('.main-section').css('min-height', new_height);
 
-      if (force){
-        $('.main-section').height(new_height);
-      }else{
-        $('.main-section').stop().animate({
-          height:new_height
-        },600);
+      // set brand top gap
+      var gap = parseInt(Math.max((new_height - obj_height) * 0.5, 0));
+      if (gap > default_top_padding){
+        $('.main-section').css('padding-top', gap);
+      } else {
+        $('.main-section').css('padding-top', '');
       }
     }
   }
+
+  //Resize
+  resizeHandler();
+  $(window).resize( function(){
+    resizeHandler();
+  });
 
 });

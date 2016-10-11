@@ -52,7 +52,7 @@
           {% set _offset = 'col-sm-offset-2' if (meta.products|length) == 2
                       else 'col-sm-offset-4' if (meta.products|length) == 1 %}
           {% for prd in meta.products[:3] %}
-          <div class="col-sm-4 {{_offset}}">
+          <div class="col-sm-4 {{_offset if loop.index == 1}}">
             <a href="{{prd.link | url}}"
                class="flag {{prd.class}}">
               <img src="{{prd.src|thumbnail}}"></span>
