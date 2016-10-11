@@ -108,9 +108,9 @@
 </section>
 <!-- #Main -->
 <div sup-query="page"
-     ng-model="query.page"
+     ng-model="query.pages"
      with-content="true"></div>
-<section ng-repeat="page in query.page.contents"
+<section ng-repeat="page in query.pages.contents"
          ng-if="page.template != meta.template"
          id="{{page.slug}}"
          class="content-block {{page.bg.class}}"
@@ -140,10 +140,13 @@
 <section class="content-block">
   <div>
     <div class="container">
-      <div sup-widget-create="query.page.contents"></div>
+      <div sup-widget-create="query.pages.contents"
+           limit="{{query.pages.perpage}}"></div>
     </div>
   </div>
 </section>
+
+{% include "_footer.tpl" %}
 
 <div class="cover {{meta.hero.class}}"
      style="{{meta.hero.style}}"></div>

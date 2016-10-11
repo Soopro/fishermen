@@ -157,10 +157,12 @@ iframe {
 .shareto > * {
   margin: 0 5px;
 }
-section {
+section,
+footer {
   z-index: 1;
   position: relative;
 }
+
 
 /* GRID: =Masthead
 ----------------------------------------------- */
