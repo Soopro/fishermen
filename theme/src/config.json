@@ -15,11 +15,11 @@
   "templates":[
     "index",
     "^page",
-    "^feature",
-    "^feature-s1",
-    "^feature-s2",
-    "^service",
-    "^portfolio"
+    "^page-s1",
+    "^page-s2",
+    "^page-s3",
+    "^features",
+    "^clients"
   ],
 
 	"options":{

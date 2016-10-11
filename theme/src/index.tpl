@@ -140,7 +140,7 @@
 <section class="content-block">
   <div>
     <div class="container">
-      <div sup-widget-create="{{query.page.contents}}"></div>
+      <div sup-widget-create="query.page.contents"></div>
     </div>
   </div>
 </section>
