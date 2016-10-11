@@ -73,9 +73,13 @@
   {% set pages = query('page', 0, 24, with_content=True).contents %}
 	{% for page in pages if page.template != meta.template %}
 	<!-- Section -->
-	<section id="{{page.slug}}" class="content-block">
+	<section id="{{page.slug}}"
+           class="content-block {{page.bg.class}}"
+           style="{{page.bg.style}}">
 		<!-- Section Block -->
-		{% include page.template+".html" ignore missing %}
+    <div>
+		  {% include page.template+".html" ignore missing %}
+    </div>
 		<!-- #Section Block -->
 	</section>
 	<!-- #Section -->

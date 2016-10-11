@@ -1,51 +1,41 @@
 {% import 'g.tpl' %}
 {% include '_css.tpl' %}
 
-<!-- Webfonts -->
-<link ng-href='{{theme_url}}/styles/fonts/lato.css'
-      rel='stylesheet'
-      type='text/css'>
-<!-- Bootstrap core CSS -->
-<link ng-href="{{theme_url}}/libs/bootstrap/bootstrap.min.css"
-      rel='stylesheet'
-      type='text/css'>
-<!-- Styles-->
-<link ng-href="{{theme_url}}/styles/style.css"
-      rel='stylesheet'
-      type='text/css'>
 
 <div class="editor-gap-top"></div>
 <!-- Content Block -->
-<article id="{{meta.slug}}" class="content-block">
-  <div class="feature {{meta.bg.class}}"
-       sup-widget-bg
-       ng-model="meta.bg"
-       style="{{meta.bg.style}}">
-    <section class="container">
+<section id="{{meta.slug}}"
+         class="content-block {{meta.bg.class}}"
+         style="{{meta.bg.style}}">
+  <div sup-widget-bg
+       ng-model="meta.bg"></div>
+  <div>
+    <div class="container">
       <div class="row"
-           sup-widget-collection
-           ng-model="meta.gallery">
-        <div class="col-sm-4 pointbox"
-             ng-repeat="media in meta.gallery"
-             ng-if="meta.gallery.length > 0">
-          <h3 ng-if="media.title">{{media.title}}</h3>
-          <p ng-if="media.caption">{{media.caption}}</p>
-          <img class="{{media.class}}"
-               ng-if="media.src"
-               ng-src="{{media.src}}"
-               alt="media" />
+           sup-widget-series
+           default="{{g.default_clients}}"
+           limit="4"
+           ng-model="meta.series">
+
+        <div class="col-sm-3 item {{item.class}}"
+             ng-repeat="item in meta.series"
+             sup-widget-series-item>
+          <a href="#">
+            <img src="{{g.img_holder}}"
+                 class="img-holder"
+                 style="{{item.src|bg_img(g.default_thumbnail)}}"/>
+          </a>
         </div>
-        <div class="col-sm-4 pointbox"
-             ng-repeat="media in [1,2,3]"
-             ng-if="meta.gallery.length <= 0 || !meta.gallery">
-          <h3>{{_('Title')}}</h3>
-          <div class="caption">
-            <p>{{_('$_CAPTION')}}</p>
-          </div>
-          <img ng-src="{{g.default_thumbnail}}" alt="media" />
+        <div class="col-sm-3 item"
+             sup-widget-series-item="new">
+          <a href="#">
+            <img src="{{g.img_holder}}"
+                 class="img-holder"
+                 style="{{g.default_thumbnail|bg_img}}">
+          </a>
         </div>
       </div>
-    </section>
+    </div>
   </div>
-</article>
+</section>
 <!-- #Content Block -->

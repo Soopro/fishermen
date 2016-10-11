@@ -32,7 +32,7 @@
            }
          ]"></sup-set>
 
-<sup-set ng-model="g.default_client"
+<sup-set ng-model="g.default_clients"
          object="[
            {
              'title': _('Client Name'),

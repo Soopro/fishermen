@@ -6,8 +6,7 @@
 {% include '_header.tpl' %}
 <!-- #Header -->
 <!-- Main -->
-<section id="{{meta.slug}}"
-         class="main-section">
+<section id="{{meta.slug}}" class="main-section">
   <div sup-widget-bg
        ng-model="meta.hero"></div>
   <div class="container">
@@ -114,15 +113,36 @@
 <section ng-repeat="page in query.page.contents"
          ng-if="page.template != meta.template"
          id="{{page.slug}}"
-         class="content-block">
-	<!-- Section Block -->
+         class="content-block {{page.bg.class}}"
+         style="{{page.bg.style}}">
+
+	<!-- Section Blocks -->
   <div ng-if="page.template == 'page'">
     {% include "blocks/_page.tpl" %}
   </div>
   <div ng-if="page.template == 'page-s1'">
     {% include "blocks/_page-s1.tpl" %}
   </div>
-	<!-- #Section Block -->
+  <div ng-if="page.template == 'page-s2'">
+    {% include "blocks/_page-s2.tpl" %}
+  </div>
+  <div ng-if="page.template == 'page-s3'">
+    {% include "blocks/_page-s3.tpl" %}
+  </div>
+  <div ng-if="page.template == 'features'">
+    {% include "blocks/_features.tpl" %}
+  </div>
+  <div ng-if="page.template == 'clients'">
+    {% include "blocks/_clients.tpl" %}
+  </div>
+	<!-- #Section Blocks -->
+</section>
+<section class="content-block">
+  <div>
+    <div class="container">
+      <div sup-widget-create="{{query.page.contents}}"></div>
+    </div>
+  </div>
 </section>
 
 <div class="cover {{meta.hero.class}}"

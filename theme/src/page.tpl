@@ -1,27 +1,17 @@
 {% import 'g.tpl' %}
 {% include '_css.tpl' %}
 
-<!-- Header -->
-{% include '_header.tpl' %}
-<!-- #Header -->
 
 <div class="editor-gap-top"></div>
 <!-- Content Block -->
 <section id="{{meta.slug}}"
-         class="content-block">
-  <div class="page {{meta.bg.preset}} {{meta.bg.class}}"
-       sup-widget-bg
-       ng-model="meta.bg"
-       style="{{meta.bg.style}}">
+         class="content-block {{meta.bg.class}}"
+         style="{{meta.bg.style}}">
+  <div sup-widget-bg
+       ng-model="meta.bg"></div>
+  <div>
     <div class="container">
       <div class="row">
-        <div class="col-md-12 imgbox">
-          <div sup-widget-media
-               ng-model="meta.featured_img">
-            <img ng-src="{{meta.featured_img.src || g.default_featured_img}}"
-                 class="{{meta.featured_img.class}}"/>
-          </div>
-        </div>
         <div class="col-md-8 col-md-offset-2 textbox">
           <header class="text-center">
             <h2 sup-widget-text

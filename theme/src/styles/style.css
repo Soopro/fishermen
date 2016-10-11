@@ -128,6 +128,11 @@ a:hover {
 	text-decoration: underline;
 }
 
+a.disabled {
+  cursor: default;
+  pointer-events: none;
+}
+
 hr {
 	border-top-color: #ccc;
 }
@@ -398,18 +403,15 @@ section {
   background: #fff;
   border-bottom: 1px solid #ccc;
 }
-
-.content-block .page {
+.content-block > div {
   min-height: 300px;
   padding: 45px 0;
 }
-.content-block .page.bottom-less {
+.content-block .bottom-less {
   padding-bottom: 0;
 }
-
 .content-block .imgbox {
   text-align: center;
-  overflow: hidden;
 }
 .content-block .imgbox img {
   max-width: 100%;
@@ -525,7 +527,7 @@ Lastly, apply responsive CSS fixes as necessary
     font-size: 0.8em;
   }
 
-  .content-block .page {
+  .content-block > div {
     min-height: 50px;
   }
   .content-block .caption {

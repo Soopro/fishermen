@@ -1,7 +1,7 @@
 <div class="container"
      sup-widget-open="page">
   <div class="row">
-    <div class="col-md-6 pull-right textbox aside">
+    <div class="col-md-6 pull-left textbox aside">
       <header>
         <h2>{{page.title}}</h2>
       </header>
@@ -9,9 +9,10 @@
            ng-bind-html="page.content">
       </div>
     </div>
-    <div class="col-md-6 pull-left imgbox">
+    <div class="col-md-6 pull-right imgbox">
       <img ng-src="{{page.featured_img.src || g.default_featured_img}}"
-           alt="{{page.featured_img.title}}" />
+           alt="{{page.featured_img.title}}"
+           class="{{page.featured_img.class}}"/>
     </div>
   </div>
 </div>

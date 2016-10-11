@@ -1,19 +1,12 @@
 {% if g and page %}
-<div class="page {{page.bg.preset}} {{page.bg.class}}"
-     style="{{page.bg.style}}">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 imgbox">
-        <img src="{{page.featured_img.src or g.default_featured_img}}"
-             alt="{{page.featured_img.title}}" />
-      </div>
-      <div class="col-md-8 col-md-offset-2 textbox">
-        <header class="text-center">
-          <h2>{{page.title}}</h2>
-        </header>
-        <div class="content text-center">
-          {{page.content}}
-        </div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2 textbox">
+      <header class="text-center">
+        <h2>{{page.title}}</h2>
+      </header>
+      <div class="content text-center">
+        {{page.content}}
       </div>
     </div>
   </div>

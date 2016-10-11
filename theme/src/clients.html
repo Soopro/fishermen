@@ -1,33 +1,26 @@
 {% if g and page %}
-<div class="page {{page.bg.preset}} {{page.bg.class}}"
-     style="{{page.bg.style}}">
-    <section class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <header class="text-center">
-            <h2>{{page.title}}</h2>
-          </header>
-        </div>
-      </div>
-      <div class="row">
-        {% for item in page.series if item.src %}
-        <div class="col-sm-3 item">
-          {% if item.link %}
-          <a href="{{item.link | url}}"
-             target="{{item.target}}">
-            <img class="{{item.class}}"
-                 src="{{item.src}}"
-                 alt="{{item.title}}" />
-          </a>
-          {% else %}
-          <img class="{{item.class}}"
-               src="{{item.src}}"
-               alt="{{item.title}}" />
-          {% endif %}
-        </div>
-        {% endfor %}
-      </div>
-    </section>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <header class="text-center">
+        <h2>{{page.title}}</h2>
+      </header>
+    </div>
+  </div>
+  <div class="row">
+    {% for item in page.series if item.src %}
+    <div class="col-sm-3 item {{item.class}}">
+      <a class="{{'disabled' if not item.link}}"
+         href="{{item.link | url}}"
+         target="{{item.target}}">
+        <img src="{{g.img_holder}}"
+             class="img-holder"
+             style="{{item.src|bg_img(g.default_thumbnail)}}"
+             alt="{{item.title}}" />
+      </a>
+    </div>
+    {% endfor %}
+  </div>
 </div>
 {% else %}
 <script>window.location.replace('{{base_url}}/#/{{meta.slug}}');</script>

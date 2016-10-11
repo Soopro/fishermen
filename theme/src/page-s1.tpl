@@ -1,19 +1,16 @@
 {% import 'g.tpl' %}
 {% include '_css.tpl' %}
 
-<!-- Header -->
-{% include '_header.tpl' %}
-<!-- #Header -->
 
 <div class="editor-gap-top"></div>
 <!-- Content Block -->
-<article id="{{meta.slug}}"
-         class="content-block">
-  <div class="page {{meta.bg.preset}} {{meta.bg.class}}"
-       sup-widget-bg
-       ng-model="meta.bg"
-       style="{{meta.bg.style}}">
-    <section class="container">
+<section id="{{meta.slug}}"
+         class="content-block {{meta.bg.class}}"
+         style="{{meta.bg.style}}">
+  <div sup-widget-bg
+       ng-model="meta.bg"></div>
+  <div>
+    <div class="container">
       <div class="row">
         <div class="col-md-6 pull-right textbox">
           <header>
@@ -33,7 +30,7 @@
           </div>
         </div>
       </div>
-    </section>
-	</div>
-</article>
+    </div>
+  </div>
+</section>
 <!-- #Content Block -->
