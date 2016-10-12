@@ -18,17 +18,22 @@
            {
              'title': _('Item Title'),
              'caption': _('Click here to edit series item.'),
-             'src': theme_url+'/styles/default_thumbnail.png'
+             'src': theme_url+'/styles/feature_1.png'
            },
            {
              'title': _('Item Title'),
              'caption': _('Click here to edit series item.'),
-             'src': theme_url+'/styles/default_thumbnail.png'
+             'src': theme_url+'/styles/feature_2.png'
            },
            {
              'title': _('Item Title'),
              'caption': _('Click here to edit series item.'),
-             'src': theme_url+'/styles/default_thumbnail.png'
+             'src': theme_url+'/styles/feature_3.png'
+           },
+           {
+             'title': _('Item Title'),
+             'caption': _('Click here to edit series item.'),
+             'src': theme_url+'/styles/feature_4.png'
            }
          ]"></sup-set>
 
@@ -36,15 +41,15 @@
          object="[
            {
              'title': _('Client Name'),
-             'src': theme_url+'/styles/default_thumbnail.png'
+             'src': theme_url+'/styles/client_1.png'
            },
            {
              'title': _('Client Name'),
-             'src': theme_url+'/styles/default_thumbnail.png'
+             'src': theme_url+'/styles/client_2.png'
            },
            {
              'title': _('Client Name'),
-             'src': theme_url+'/styles/default_thumbnail.png'
+             'src': theme_url+'/styles/client_3.png'
            }
          ]"></sup-set>
 

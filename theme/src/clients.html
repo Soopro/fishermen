@@ -8,8 +8,15 @@
     </div>
   </div>
   <div class="row">
+
+    {% set col_client = "col-sm-3"
+       if page.series|length >= 4 else "col-sm-4" %}
+    {% set col_client_offset = page.series|col_offset('col-sm-offset-', 4) %}
+
     {% for item in page.series if item.src %}
-    <div class="col-sm-3 item {{item.class}}">
+    <div class="{{col_client}} {{col_client_offset if loop.first}}
+                item {{item.class}}">
+
       <a class="{{'disabled' if not item.link}}"
          href="{{item.link | url}}"
          target="{{item.target}}">

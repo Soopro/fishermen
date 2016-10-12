@@ -11,6 +11,15 @@
        ng-model="meta.bg"></div>
   <div>
     <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <header class="text-center">
+            <h2 sup-widget-text
+                ng-model="meta.title"
+                default="{{_('Title')}}"></h2>
+          </header>
+        </div>
+      </div>
       <div class="row"
            sup-widget-series
            default="{{g.default_clients}}"
@@ -18,21 +27,23 @@
            ng-model="meta.series">
 
         <div class="col-sm-3 item {{item.class}}"
-             ng-repeat="item in meta.series"
-             sup-widget-series-item>
-          <a href="#">
-            <img src="{{g.img_holder}}"
-                 class="img-holder"
-                 style="{{item.src|bg_img(g.default_thumbnail)}}"/>
-          </a>
+             ng-repeat="item in meta.series">
+          <div sup-widget-series-item>
+            <a href="#">
+              <img ng-src="{{g.img_holder}}"
+                   class="img-holder"
+                   style="{{item.src|bg_img:g.default_thumbnail}}"/>
+            </a>
+          </div>
         </div>
-        <div class="col-sm-3 item"
-             sup-widget-series-item="new">
-          <a href="#">
-            <img src="{{g.img_holder}}"
-                 class="img-holder"
-                 style="{{g.default_thumbnail|bg_img}}">
-          </a>
+        <div class="col-sm-3 item">
+          <div sup-widget-series-item="new">
+            <a href="#">
+              <img ng-src="{{g.img_holder}}"
+                   class="img-holder"
+                   style="{{g.default_thumbnail|bg_img}}">
+            </a>
+          </div>
         </div>
       </div>
     </div>

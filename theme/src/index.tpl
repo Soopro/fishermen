@@ -88,7 +88,7 @@
             </a>
           </div>
           <div class="col-sm-4
-                      {{meta.products.length<1?'col-sm-offset-4':''}}">
+                      {{meta.products.length < 1?'col-sm-offset-4':''}}">
             <a class="flag"
                sup-widget-series-item="new"
                href="#">
@@ -137,7 +137,7 @@
   </div>
 	<!-- #Section Blocks -->
 </section>
-<section class="content-block">
+<section class="content-block last">
   <div>
     <div class="container">
       <div sup-widget-create="query.pages.contents"

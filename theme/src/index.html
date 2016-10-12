@@ -74,7 +74,7 @@
 	{% for page in pages if page.template != meta.template %}
 	<!-- Section -->
 	<section id="{{page.slug}}"
-           class="content-block {{page.bg.class}}"
+           class="content-block {{'last' if loop.last}} {{page.bg.class}}"
            style="{{page.bg.style}}">
 		<!-- Section Block -->
     <div>
