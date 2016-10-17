@@ -140,7 +140,7 @@
 <section class="content-block last">
   <div>
     <div class="container">
-      <div sup-widget-create refs="query.sec"></div>
+      <div sup-widget-create="major" refs="query.sec"></div>
     </div>
   </div>
 </section>
