@@ -62,16 +62,16 @@
     "msgstr": "小标题"
   },
   {
-    "msgid": "Click here to edit series item.",
-    "msgstr": "点这里编辑这条序列内容。"
+    "msgid": "Click here to edit this item.",
+    "msgstr": "点这里编辑这条内容。"
   },
   {
     "msgid": "Add New Item",
     "msgstr": "添加新条目"
   },
   {
-    "msgid": "Click here to add a series item.",
-    "msgstr": "点击这里添加一个新的序列条目。"
+    "msgid": "Click here to add a item.",
+    "msgstr": "点击这里添加新条目。"
   },
   {
     "msgid": "$_CONTENT",

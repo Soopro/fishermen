@@ -2,7 +2,7 @@
      sup-widget-open="page">
   <div class="row">
     <div class="col-sm-3 text-center feature {{item.class}}"
-         ng-repeat="item in page.series">
+         ng-repeat="item in page.features">
       <figure>
         <img ng-src="{{g.img_holder}}"
              class="img-holder"

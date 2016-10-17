@@ -20,22 +20,22 @@
          object="[
            {
              'title': _('Item Title'),
-             'caption': _('Click here to edit series item.'),
+             'caption': _('Click here to edit this item.'),
              'src': theme_url+'/styles/fe_ico_1.png'
            },
            {
              'title': _('Item Title'),
-             'caption': _('Click here to edit series item.'),
+             'caption': _('Click here to edit this item.'),
              'src': theme_url+'/styles/fe_ico_2.png'
            },
            {
              'title': _('Item Title'),
-             'caption': _('Click here to edit series item.'),
+             'caption': _('Click here to edit this item.'),
              'src': theme_url+'/styles/fe_ico_3.png'
            },
            {
              'title': _('Item Title'),
-             'caption': _('Click here to edit series item.'),
+             'caption': _('Click here to edit this item.'),
              'src': theme_url+'/styles/fe_ico_4.png'
            }
          ]"></sup-set>
