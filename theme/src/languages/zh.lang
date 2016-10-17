@@ -59,11 +59,11 @@
   },
   {
     "msgid": "Item Title",
-    "msgstr": "条目标题"
+    "msgstr": "小标题"
   },
   {
     "msgid": "Click here to edit series item.",
-    "msgstr": "点击这里编辑这一条序列条目。"
+    "msgstr": "点这里编辑这条序列内容。"
   },
   {
     "msgid": "Add New Item",
