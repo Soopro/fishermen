@@ -4,6 +4,7 @@
 {% set default_feature_img = theme_url+'/styles/default_feature_img.png' %}
 
 {% set img_holder = libs_url+"/styles/trans.png" %}
+{% set app_holder = theme_url+"/styles/app_holder.png" %}
 
 {% set opts = theme_meta.options %}
 {% set ver = theme_meta.version %}

@@ -2,11 +2,11 @@
 <div class="container">
   <div class="row">
     {% for item in page.series %}
-    <div class="col-md-3 text-center feature {{item.class}}">
+    <div class="col-sm-3 text-center feature {{item.class}}">
       <figure>
         <img src="{{g.img_holder}}"
              class="img-holder"
-             style="{{item.src|bg_img(g.default_thumbnail)}}"
+             style="{{item.src|bg_img}}"
              alt="{{item.title}}" />
       </figure>
       <h3 class="text-nowrap">{{item.title}}</h3>

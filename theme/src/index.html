@@ -55,7 +55,8 @@
           <div class="col-sm-4 {{_offset if loop.index == 1}}">
             <a href="{{prd.link | url}}"
                class="flag {{prd.class}}">
-              <img src="{{prd.src|thumbnail}}"></span>
+              <img src="{{g.app_holder}}"
+                   style="{{prd.src|bg_img(g.default_thumbnail)}}" />
             </a>
           </div>
           {% endfor %}
@@ -70,8 +71,8 @@
     </div>
   </section>
 	<!-- #Main -->
-  {% set pages = query('page', 0, 24, with_content=True).contents %}
-	{% for page in pages if page.template != meta.template %}
+  {% set sec = query_refs() %}
+	{% for page in sec.contents if page.template != meta.template %}
 	<!-- Section -->
 	<section id="{{page.slug}}"
            class="content-block {{'last' if loop.last}} {{page.bg.class}}"

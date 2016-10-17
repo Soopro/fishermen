@@ -17,7 +17,7 @@
     <div class="{{col_client}} {{col_client_offset if loop.first}}
                 item {{item.class}}">
 
-      <a class="{{'disabled' if not item.link}}"
+      <a class="client {{'disabled' if not item.link}}"
          href="{{item.link | url}}"
          target="{{item.target}}">
         <img src="{{g.img_holder}}"

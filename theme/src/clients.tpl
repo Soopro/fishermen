@@ -29,10 +29,11 @@
         <div class="col-sm-3 item {{item.class}}"
              ng-repeat="item in meta.series">
           <div sup-widget-series-item>
-            <a href="#">
+            <a class="client"
+               href="#">
               <img ng-src="{{g.img_holder}}"
                    class="img-holder"
-                   style="{{item.src|bg_img:g.default_thumbnail}}"/>
+                   style="{{item.src|bg_img}}"/>
             </a>
           </div>
         </div>

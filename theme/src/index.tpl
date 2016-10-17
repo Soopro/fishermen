@@ -84,7 +84,8 @@
             <a class="flag {{prd.class}}"
                sup-widget-series-item
                href="#">
-              <img ng-src="{{prd.src|thumbnail}}"></span>
+              <img ng-src="{{g.app_holder}}"
+                   style="{{prd.src|bg_img:g.default_thumbnail}}" />
             </a>
           </div>
           <div class="col-sm-4
@@ -107,10 +108,9 @@
   </div>
 </section>
 <!-- #Main -->
-<div sup-query="page"
-     ng-model="query.pages"
-     with-content="true"></div>
-<section ng-repeat="page in query.pages.contents"
+<div sup-query-refs ng-model="query.sec"></div>
+
+<section ng-repeat="page in query.sec.contents"
          ng-if="page.template != meta.template"
          id="{{page.slug}}"
          class="content-block {{page.bg.class}}"
@@ -140,8 +140,7 @@
 <section class="content-block last">
   <div>
     <div class="container">
-      <div sup-widget-create="query.pages.contents"
-           limit="{{query.pages.perpage}}"></div>
+      <div sup-widget-create refs="query.sec"></div>
     </div>
   </div>
 </section>

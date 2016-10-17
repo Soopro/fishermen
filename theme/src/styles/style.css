@@ -10,7 +10,7 @@ Version: 1.0
 
 /* REST: =Ovrride
 ----------------------------------------------- */
-.form-control, .dropdown-toggle{
+.form-control, .dropdown-toggle {
   background: rgba(20,20,20,0.5);
   border: 0;
   box-shadow:none;
@@ -22,7 +22,7 @@ Version: 1.0
 .caret {
   color: #859e52;
 }
-.input-group .input-group-btn .dropdown-toggle{
+.input-group .input-group-btn .dropdown-toggle {
   margin-right: 0px;
 }
 
@@ -34,7 +34,7 @@ Version: 1.0
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075),
               0 0 8px rgba(204, 255, 102, 0.6);
 }
-.dropdown-menu{
+.dropdown-menu {
   color: #eee;
   padding: 20px 15px;
   background: rgba(20,20,20,0.9);
@@ -346,11 +346,8 @@ footer {
 }
 
 .store .flag {
-  display: block;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  width: 100%;
-  height: 50px;
+  display: inline-block;
+  margin: 5px auto;
   font-size: 0;
   text-align: center;
   border-radius: 10px;
@@ -359,9 +356,9 @@ footer {
   background-repeat: no-repeat;
   background-position: center center;
 }
+
 .store .flag img {
-  width: auto;
-  max-height: 100%;
+  margin: 0 auto;
 }
 .store .flag.fade {
   opacity: 0.2;
@@ -371,6 +368,8 @@ footer {
 .store a:hover {
   background: #690;
 }
+
+
 
 /* MODULE: =GoFeatures
 ----------------------------------------------- */
@@ -450,6 +449,19 @@ footer {
   padding: 0 8px;
   height: 70px;
   margin-bottom: 30px;
+}
+
+.content-block .client {
+  display: block;
+  padding: 30px;
+}
+
+.content-block .feature figure {
+  padding: 15px;
+}
+.content-block .feature img {
+  border-radius: 50%;
+  background-color: #859e52;
 }
 
 /* GRID: =Footer

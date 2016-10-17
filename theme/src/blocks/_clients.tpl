@@ -17,7 +17,7 @@
       <a href="#">
         <img ng-src="{{g.img_holder}}"
              class="img-holder"
-             style="{{item.src|bg_img:g.default_thumbnail}}" />
+             style="{{item.src|bg_img}}" />
       </a>
     </div>
 

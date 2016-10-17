@@ -23,7 +23,7 @@
             <figure>
               <img ng-src="{{g.img_holder}}"
                    class="img-holder"
-                   style="{{item.src|bg_img:g.default_thumbnail}}">
+                   style="{{item.src|bg_img}}">
             </figure>
             <h3 class="text-nowrap">{{item.title}}</h3>
             <p class="text-clamp-3 caption">{{item.caption}}</p>

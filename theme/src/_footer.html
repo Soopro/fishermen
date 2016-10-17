@@ -1,18 +1,18 @@
 <!-- Footer -->
 <footer class="footer">
-    <div class="container">
-      {% if socials %}
-      <div class="shareto" id="shareto">
-        {% for social in socials if social.code %}
-          {{social.code}}
-        {% endfor %}
-      </div>
-      {% endif %}
-      <div class="copyright">
-        <span>{{site_meta.copyright}}</span>
-			  <span>{{site_meta.license}}</span>
-      </div>
+  <div class="container">
+    {% if socials %}
+    <div class="shareto">
+      {% for social in socials if social.code %}
+        {{social.code}}
+      {% endfor %}
     </div>
+    {% endif %}
+    <div class="copyright">
+      <span>{{site_meta.copyright}}</span>
+		  <span>{{site_meta.license}}</span>
+    </div>
+  </div>
 </footer>
 <!-- #Footer -->
 <!--

@@ -13,27 +13,30 @@
 <sup-set ng-model="g.img_holder"
          value="{{libs_url+'/styles/trans.png'}}"></sup-set>
 
+<sup-set ng-model="g.app_holder"
+         value="{{theme_url+'/styles/app_holder.png'}}"></sup-set>
+
 <sup-set ng-model="g.default_features"
          object="[
            {
              'title': _('Item Title'),
              'caption': _('Click here to edit series item.'),
-             'src': theme_url+'/styles/feature_1.png'
+             'src': theme_url+'/styles/fe_ico_1.png'
            },
            {
              'title': _('Item Title'),
              'caption': _('Click here to edit series item.'),
-             'src': theme_url+'/styles/feature_2.png'
+             'src': theme_url+'/styles/fe_ico_2.png'
            },
            {
              'title': _('Item Title'),
              'caption': _('Click here to edit series item.'),
-             'src': theme_url+'/styles/feature_3.png'
+             'src': theme_url+'/styles/fe_ico_3.png'
            },
            {
              'title': _('Item Title'),
              'caption': _('Click here to edit series item.'),
-             'src': theme_url+'/styles/feature_4.png'
+             'src': theme_url+'/styles/fe_ico_4.png'
            }
          ]"></sup-set>
 
@@ -56,6 +59,7 @@
 
 <sup-set ng-model="g.additem"
          value="{{theme_url+'/styles/additem.png'}}"></sup-set>
+
 
 <sup-set ng-model="g.default_products"
          object="[
