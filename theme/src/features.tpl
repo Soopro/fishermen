@@ -15,11 +15,11 @@
            sup-widget-series
            default="{{g.default_features}}"
            limit="4"
-           ng-model="meta.feature">
+           ng-model="meta.series">
 
         <div class="col-sm-3 text-center feature {{item.class}}"
-             ng-repeat="item in meta.feature">
-          <div sup-widget-series-item>
+             ng-repeat="item in meta.series">
+          <div series-item>
             <figure>
               <img ng-src="{{g.img_holder}}"
                    class="img-holder"
@@ -31,11 +31,11 @@
         </div>
 
         <div class="col-sm-3 text-center feature">
-          <div sup-widget-series-item="new">
+          <div series-item-create>
             <figure>
               <img ng-src="{{g.img_holder}}"
                    class="img-holder"
-                   style="{{g.default_thumbnail|bg_img}}">
+                   style="{{g.default_img|bg_img}}">
             </figure>
             <h3 class="text-nowrap">{{_('Add New Item')}}</h3>
             <p class="text-clamp-3 caption"

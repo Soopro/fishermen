@@ -1,5 +1,4 @@
-<div class="container"
-     sup-widget-open="page">
+<div class="container" segment>
   <div class="row">
     <div class="col-md-12">
       <header class="text-center">

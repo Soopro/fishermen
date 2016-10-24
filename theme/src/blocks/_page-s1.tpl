@@ -1,5 +1,4 @@
-<div class="container"
-     sup-widget-open="page">
+<div class="container" segment>
   <div class="row">
     <div class="col-md-6 pull-right textbox aside">
       <header>

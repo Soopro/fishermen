@@ -12,7 +12,7 @@
     <div class="container">
       <div class="brand">
         <div class="logo">
-          <img src="{{meta.logo or site_meta.logo or g.default_logo}}"
+          <img src="{{meta.logo.src or site_meta.logo or g.default_logo}}"
                alt="{{site_meta.title}}" />
         </div>
         <h1>{{meta.title}}</h1>
@@ -56,7 +56,7 @@
             <a href="{{prd.link | url}}"
                class="flag {{prd.class}}">
               <img src="{{g.app_holder}}"
-                   style="{{prd.src|bg_img(g.default_thumbnail)}}" />
+                   style="{{prd.src|bg_img(g.default_img)}}" />
             </a>
           </div>
           {% endfor %}
@@ -71,15 +71,14 @@
     </div>
   </section>
 	<!-- #Main -->
-  {% set sec = query_refs() %}
-	{% for page in sec.contents if page.template != meta.template %}
+	{% for page in segments() if page.template != meta.template %}
 	<!-- Section -->
 	<section id="{{page.slug}}"
            class="content-block {{'last' if loop.last}} {{page.bg.class}}"
            style="{{page.bg.style}}">
 		<!-- Section Block -->
     <div>
-		  {% include page.template+".html" ignore missing %}
+	    {% include page.template+".html" ignore missing %}
     </div>
 		<!-- #Section Block -->
 	</section>

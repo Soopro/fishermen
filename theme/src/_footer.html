@@ -9,7 +9,7 @@
     </div>
     {% endif %}
     <div class="copyright">
-      <span>{{site_meta.copyright}}</span>
+      <span>{{site_meta.copyright or _('$_COPY')}}</span>
 		  <span>{{site_meta.license}}</span>
     </div>
   </div>

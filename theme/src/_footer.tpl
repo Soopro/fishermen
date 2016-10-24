@@ -8,7 +8,7 @@
       </div>
     </div>
     <div class="copyright">
-      <span ng-bind-html="site_meta.copyright"></span>
+      <span ng-bind-html="site_meta.copyright||_('$_COPY')"></span>
 		  <span ng-bind-html="site_meta.license"></span>
     </div>
   </div>

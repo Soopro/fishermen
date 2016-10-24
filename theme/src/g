@@ -1,7 +1,7 @@
 {% set default_logo = theme_url+'/styles/logo.png' %}
 {% set default_favicon = theme_url+'/styles/favicon.png' %}
-{% set default_thumbnail = theme_url+'/styles/default_thumbnail.png' %}
-{% set default_feature_img = theme_url+'/styles/default_feature_img.png' %}
+{% set default_img = theme_url+'/styles/default_img.png' %}
+{% set default_featured_img = theme_url+'/styles/default_pic.jpg' %}
 
 {% set img_holder = libs_url+"/styles/trans.png" %}
 {% set app_holder = theme_url+"/styles/app_holder.png" %}

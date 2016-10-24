@@ -356,9 +356,10 @@ footer {
   background-repeat: no-repeat;
   background-position: center center;
 }
-
 .store .flag img {
   margin: 0 auto;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 .store .flag.fade {
   opacity: 0.2;

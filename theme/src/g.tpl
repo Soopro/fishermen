@@ -5,10 +5,10 @@
          value="{{theme_url+'/styles/logo.png'}}"></sup-set>
 
 <sup-set ng-model="g.default_featured_img"
-         value="{{theme_url+'/styles/default_featured_img.png'}}"></sup-set>
+         value="{{theme_url+'/styles/default_pic.jpg'}}"></sup-set>
 
-<sup-set ng-model="g.default_thumbnail"
-         value="{{theme_url+'/styles/default_thumbnail.png'}}"></sup-set>
+<sup-set ng-model="g.default_img"
+         value="{{theme_url+'/styles/default_img.png'}}"></sup-set>
 
 <sup-set ng-model="g.img_holder"
          value="{{libs_url+'/styles/trans.png'}}"></sup-set>

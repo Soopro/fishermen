@@ -28,7 +28,7 @@
 
         <div class="col-sm-3 item {{item.class}}"
              ng-repeat="item in meta.series">
-          <div sup-widget-series-item>
+          <div series-item>
             <a class="client"
                href="#">
               <img ng-src="{{g.img_holder}}"
@@ -38,11 +38,11 @@
           </div>
         </div>
         <div class="col-sm-3 item">
-          <div sup-widget-series-item="new">
+          <div series-item-create>
             <a href="#">
               <img ng-src="{{g.img_holder}}"
                    class="img-holder"
-                   style="{{g.default_thumbnail|bg_img}}">
+                   style="{{g.default_img|bg_img}}">
             </a>
           </div>
         </div>

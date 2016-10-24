@@ -2,11 +2,14 @@
   <nav class="container nav-primary">
     <div class="navbar">
       <div class="navbar-header">
-       <button type="button" class="navbar-toggle">
-         <span class="icon-bar"></span>
-         <span class="icon-bar"></span>
-         <span class="icon-bar"></span>
-       </button>
+        <button type="button" class="navbar-toggle">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div class="navbar-brand">
+          {{site_meta.title}}
+        </div>
       </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav">
