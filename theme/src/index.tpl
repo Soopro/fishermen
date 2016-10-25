@@ -37,8 +37,8 @@
            {'key': 'address', 'label': _('Email Address'),
             'default': 'your@email.here'},
 
-           {'key': 'subject', 'label': _('Subject'),
-            'default': _('Subject here.')},
+           {'key': 'subject', 'label': _('Email Subject'),
+            'default': _('Email subject here')},
 
            {'key': 'btntext', 'label':_('Button Text'),
             'default': _('Get Link')},
@@ -108,7 +108,7 @@
   </div>
 </section>
 <!-- #Main -->
-<div sup-widget-segments="segments">
+<div sup-widget-segments ng-model="segments">
   <section ng-repeat="page in segments"
            ng-if="page.template != meta.template"
            id="{{page.slug}}"

@@ -26,10 +26,6 @@
     "msgstr": "获取链接"
   },
   {
-    "msgid": "Subject",
-    "msgstr": "题目"
-  },
-  {
     "msgid": "Email Address",
     "msgstr": "邮箱地址"
   },
@@ -38,8 +34,12 @@
     "msgstr": "按钮文字"
   },
   {
-    "msgid": "Subject here.",
-    "msgstr": "在这里写题目文本。"
+    "msgid": "Email Subject",
+    "msgstr": "邮件标题"
+  },
+  {
+    "msgid": "Email subject here",
+    "msgstr": "在这里写邮件标题"
   },
   {
     "msgid": "Subtitle text here",
