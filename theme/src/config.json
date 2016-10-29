@@ -3,16 +3,17 @@
   "slug":"fishermen",
 	"title":"Fishermen",
   "author":"Redy Ru",
-  "capabilities":["ws"],
-  "icon":"icon.png",
-  "poster":"poster.jpg",
-	"previews":["previews.jpg"],
+  "type": "ws",
+  "capabilities": [],
+  "icon": "icon.png",
+  "poster": "poster.jpg",
+	"previews": ["previews.jpg"],
 	"description": {
     "en":"A simple website for your mobile app.",
     "zh":"这是一个简单的移动应用网站，用来展示您的移动应用软件。"
   },
 
-  "templates":[
+  "templates": [
     "index",
     "^page",
     "^page-s1",
@@ -22,7 +23,7 @@
     "^clients"
   ],
 
-	"options":{
+	"options": {
 		"sortby": "date"
   }
 }
